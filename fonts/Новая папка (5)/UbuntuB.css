@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'UbuntuB';
+    src: url('fonts/UbuntuB.eot');
+    src: url('fonts/UbuntuB.eot') format('embedded-opentype'),
+         url('fonts/UbuntuB.woff2') format('woff2'),
+         url('fonts/UbuntuB.woff') format('woff'),
+         url('fonts/UbuntuB.ttf') format('truetype'),
+         url('fonts/UbuntuB.svg#UbuntuB') format('svg');
+}
