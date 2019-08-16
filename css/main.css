@@ -2,3 +2,5 @@
 @import url("./layout/base.css");
 @import url("./layout/fonts.css");
 @import url("./block/header.css");
+@import url("./block/description.css");
+@import url("./block/reviews.css");

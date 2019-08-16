@@ -32,7 +32,7 @@ h1, h2, h3, h4 {
   margin: 0; }
 
 .wrapper {
-  min-width: 1000px;
+  min-width: 1104px;
   min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -43,6 +43,6 @@ h1, h2, h3, h4 {
   flex-direction: column; }
 
 .container {
-  width: 1110px;
+  width: 1104px;
   height: 100%;
   margin: 0 auto; }
