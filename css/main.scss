@@ -15,17 +15,17 @@ $z-fixed-menu: 100;
 }
 
 
-@import "layout/base.scss";
-@import "layout/fonts.scss";
-@import "layout/normalize.scss";
+@import "./layout/normalize.scss";
+@import "./layout/fonts.scss";
+@import "./layout/normalize.scss";
 
-@import "block/section.scss";
-@import "block/welcome.scss";
-@import "block/header.scss";
-@import "block/menu.scss";
-@import "block/btn.scss";
-@import "block/title.scss";
-@import "block/scroll-down-btn.scss";
-@import "block/best.scss";
-@import "block/reviews.scss";
-@import "block/scrolls.scss";
+@import "./block/section.scss";
+@import "./block/welcome.scss";
+@import "./block/header.scss";
+@import "./block/menu.scss";
+@import "./block/btn.scss";
+@import "./block/title.scss";
+@import "./block/scroll-down-btn.scss";
+@import "./block/best.scss";
+@import "./block/reviews.scss";
+@import "./block/scrolls.scss";
