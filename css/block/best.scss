@@ -1,0 +1,37 @@
+.best{
+   background: url('../../img/tho__section/bg.jpg') center center /cover no-repeat;
+   height: 100vh;
+   color: $black;
+}
+
+.best__list{
+   display: flex;
+}
+
+.best__item{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin-right: 25px;
+   text-align: center;
+   
+   &:last-child{
+      margin-right: 0;
+   }
+}
+
+.best__picture{
+   margin-bottom: 33px;
+}
+
+.best__title{
+   font-family: $lifehack;
+   font-size: 24px;
+   font-weight: 500;
+   margin-bottom: 14px;
+}
+
+.best__item-text{
+   font-size: 14px;
+   font-weight: 300;
+}

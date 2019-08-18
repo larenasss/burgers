@@ -1,0 +1,27 @@
+.welcome {
+   background: url('../../img/header/background.jpg')center / cover no-repeat;
+   position: relative;
+}
+
+.welcome__container{
+   height: 100%;
+}
+
+.welcome__content{
+   display: flex;
+   align-items: center;
+   flex: .8;
+}
+
+.welcome__desk{
+   padding-top: 50px;
+   margin-left: 12px;
+}
+
+.welcome__subtitle{
+   font-family: $lifehack;
+   font-size: 65px;
+   font-weight: 200;
+   line-height: 1;
+   letter-spacing: -1.63px;
+}

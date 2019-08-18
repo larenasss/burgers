@@ -1,0 +1,42 @@
+.menu{
+   display: flex;
+}
+
+.menu__list {
+   display: flex;
+   align-items: center;
+   margin-right: 15px;
+}
+
+.menu__item{
+   display: flex;
+   align-items: center;
+   margin-right: 14px;
+
+   &:before{ 
+      content: "";
+      width: 4px;
+      height: 4px;
+      background: #fff;
+      border-radius: 50%;
+      display: block;
+      margin-right: 14px;
+   }
+
+   &:first-child {
+      &::before{
+         display: none;
+      }
+   }
+
+   &:last-child {
+      margin-right: 0;
+   }
+}
+
+.menu__link, .menu__link-item{
+   color: white;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-size: 13px;
+}
