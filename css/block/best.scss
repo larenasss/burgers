@@ -11,27 +11,27 @@
 .best__item{
    display: flex;
    flex-direction: column;
-   justify-content: center;
    margin-right: 25px;
    text-align: center;
    
    &:last-child{
       margin-right: 0;
+      justify-content: center;
    }
 }
 
 .best__picture{
-   margin-bottom: 33px;
+   margin-bottom: 27px;
 }
 
-.best__title{
+.best__item >h4{
    font-family: $lifehack;
    font-size: 24px;
    font-weight: 500;
-   margin-bottom: 14px;
 }
 
-.best__item-text{
+.best__item >p{
    font-size: 14px;
-   font-weight: 300;
+   font-weight: 200;
+   color: rgba(47, 50, 52, 0.8);
 }

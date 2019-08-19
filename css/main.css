@@ -395,7 +395,7 @@ button {
   flex-direction: column; }
 
 .container {
-  width: 940px;
+  width: 942px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -441,9 +441,11 @@ section {
   -ms-flex: .8;
   flex: .8; }
 
+.welcome__content-pic {
+  margin-right: 12px; }
+
 .welcome__desk {
-  padding-top: 50px;
-  margin-left: 12px; }
+  padding-top: 75px; }
 
 .welcome__subtitle {
   font-family: "Lifehack-Medium";
@@ -462,7 +464,7 @@ section {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-top: 12px; }
+  padding-top: 8px; }
 
 .header__buttons {
   display: -webkit-box;
@@ -493,7 +495,7 @@ section {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-right: 14px; }
+  margin-right: 16px; }
   .menu__item:before {
     content: "";
     width: 4px;
@@ -501,7 +503,7 @@ section {
     background: #fff;
     border-radius: 50%;
     display: block;
-    margin-right: 14px; }
+    margin-right: 16px; }
   .menu__item:first-child::before {
     display: none; }
   .menu__item:last-child {
@@ -514,7 +516,7 @@ section {
   font-size: 13px; }
 
 .btn {
-  padding: 6px 15px;
+  padding: 7px 17px;
   border-radius: 5px;
   background: #e45028;
   font-size: 13px; }
@@ -531,7 +533,7 @@ section {
   font-size: 72px;
   color: #f9b43b;
   font-weight: 500;
-  margin-bottom: 26px;
+  margin-bottom: 22px;
   line-height: 1; }
   .title--color--black {
     color: #2f3234; }
@@ -540,6 +542,9 @@ section {
 
 .title--centered {
   text-align: center; }
+
+.title__best {
+  margin-bottom: 45px; }
 
 .scroll-down-btn {
   width: 29px;
@@ -572,26 +577,26 @@ section {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   margin-right: 25px;
   text-align: center; }
   .best__item:last-child {
-    margin-right: 0; }
+    margin-right: 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
 
 .best__picture {
-  margin-bottom: 33px; }
+  margin-bottom: 27px; }
 
-.best__title {
+.best__item > h4 {
   font-family: "Lifehack-Medium";
   font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 14px; }
+  font-weight: 500; }
 
-.best__item-text {
+.best__item > p {
   font-size: 14px;
-  font-weight: 300; }
+  font-weight: 200;
+  color: rgba(47, 50, 52, 0.8); }
 
 .reviews__list {
   display: -webkit-box;
