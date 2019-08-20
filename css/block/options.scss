@@ -1,0 +1,33 @@
+.options {
+   background: url('../img/options/options-bg.jpg')center center / cover no-repeat;
+   position: relative;
+}
+
+.options__accordeon{
+   position: absolute;
+   right: 0;
+   height: 100%;
+}
+
+.options__menu{
+   display: flex;
+   text-align: end;
+   height: 100%;
+}
+
+.options__item{
+   background: url('../img/options/menu-1.png')center center / cover no-repeat;
+   width: 80px;
+   height: 100%;
+   display: flex;
+   align-items: flex-end;
+   justify-content: center;
+
+   >h2{
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+      margin-bottom: 40px;
+      font-family: $gagalin;
+      font-size: 40px;
+   }
+}

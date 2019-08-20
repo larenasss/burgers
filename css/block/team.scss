@@ -3,7 +3,7 @@
    position: relative;
 }
 
-.team__block {
+.team__block{
    position: absolute;
    background: #444646;
    display: flex;
@@ -13,6 +13,10 @@
    opacity: 0.95;
    width: 50%;
    right: 0;
+}
+
+.team__content{
+   width: 55%;
 }
 
 .team__item {
@@ -26,6 +30,10 @@
 }
 
 .team__item--active{
+   
+   .team__item-title{
+      color: $yellow;
+   }
 
    .team__item-content {
       height: 100%;
@@ -35,9 +43,19 @@
 .team__item-content{
    height: 0;
    overflow: hidden;
+   padding-top: 20px;
+
+   >h5{
+      margin-bottom: 10px;
+   }
+
+   >p{
+      font-size: 14px;
+      font-weight: 300;
+   }
 }
 
-.team__item-pic >h3 {
+.team__item-pic>h3 {
    font-family: $gagalin;
    font-size: 14px;
    font-weight: 200;
