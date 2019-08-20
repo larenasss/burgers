@@ -1,0 +1,36 @@
+.best{
+   background: url('../img/tho__section/bg.jpg') center center /cover no-repeat;
+   color: $black;
+}
+
+.best__list{
+   display: flex;
+}
+
+.best__item{
+   display: flex;
+   flex-direction: column;
+   margin-right: 25px;
+   text-align: center;
+   
+   &:last-child{
+      margin-right: 0;
+      justify-content: center;
+   }
+}
+
+.best__picture{
+   margin-bottom: 27px;
+}
+
+.best__item >h4{
+   font-family: $lifehack;
+   font-size: 24px;
+   font-weight: 500;
+}
+
+.best__item >p{
+   font-size: 14px;
+   font-weight: 200;
+   color: rgba(47, 50, 52, 0.8);
+}

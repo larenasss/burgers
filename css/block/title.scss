@@ -1,0 +1,26 @@
+.title{
+   font-family: $gagalin;
+   font-size: 72px;
+   color: #f9b43b;
+   font-weight: 500;
+   margin-bottom: 22px;
+   line-height: 1;
+
+   &--color {
+      &--black {
+         color: #2f3234;
+      }
+
+      &--white {
+         color:  #ffffff;
+      }
+   }
+}
+
+.title--centered{
+   text-align: center;
+}
+
+.title__best{
+   margin-bottom: 45px;
+}
