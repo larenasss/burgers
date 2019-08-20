@@ -12,7 +12,14 @@
          border-color: #fff;
       }
    }
+
+   &:hover{
+      .scrolls__link {
+         border-color: #fff;
+      }
+   }
 }
+
 
 .scrolls__link{
    width: 16px;
