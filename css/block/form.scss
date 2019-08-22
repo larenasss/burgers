@@ -14,6 +14,11 @@
 
 .form__row {
    display: flex;
+   margin-bottom: 15px;
+
+   &:last-child {
+      margin-bottom: 0;
+   }
 }
 
 .form__block {
@@ -24,6 +29,15 @@
    &:last-child {
       margin-right: 0;
    }
+
+   &--last {
+      margin-right: 0;
+      margin-bottom: 10px;
+   }
+}
+
+.form__block-title{
+   margin-bottom: 5px;
 }
 
 .form__input {
@@ -37,4 +51,74 @@
       resize: none;
       height: 110px;
    }
+}
+
+.form__radio {
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+   margin-right: 20px;
+
+   &:last-child {
+      margin-right: 0;
+   }
+}
+
+.form__radio-input {
+   display: none;
+}
+
+.form__radio-button {
+   position: relative;
+   width: 16px;
+   height: 16px;
+   background-color: #ffffff;
+   border-radius: 50%;
+   margin-right: 20px;
+   
+   &::before {
+      content: "";
+      @include transform;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: $orange;
+      opacity: 0;
+   }
+}
+
+.form__radio-input:checked ~ .form__radio-button::before{
+   opacity: 1;
+   transition: .5s;
+ }
+
+.form__checkbox {
+   position: relative;
+   width: 15px;
+   height: 15px;
+   background-color: #ffffff;
+   margin-right: 20px;
+
+   &::before {
+      content: "";
+      left: 2px;
+      top: 3px;
+      position: absolute;
+      width: 8px;
+      height: 4px;
+      border-radius: 1px;
+      border-left: 3px solid $orange;
+      border-bottom: 3px solid $orange;
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      opacity: 0;
+   }
+}
+
+.form__radio-input:checked ~ .form__checkbox::before {
+   opacity: 1;
+   transition: .5s;
 }

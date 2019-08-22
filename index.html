@@ -168,15 +168,43 @@
          <h1 class="title title__options">Меню</h1>
          <div class="options__accordeon">
             <ul class="options__menu">
-               <li class="options__item">
+               <li class="options__item options__item--active">
+                  <div class="options__pic options__pic--meat">
                   <h2>Для мясоедов</h2>
+                  </div>
+                  <div class="options__content">
+                     <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus alias et reiciendis, 
+                        cupiditate tenetur pariatur magni dolorem quasi, libero beatae accusamus similique delectus 
+                        minus id officia reprehenderit aspernatur a perferendis?
+                     </p>
+                  </div>
                </li>
                <li class="options__item">
-                  <h2>Вегетарианское</h2>
+                  <div class="options__pic options__pic--vegetarian">
+                  <h2>Для мясоедов</h2>
+                  </div>
+                  <div class="options__content">
+                     <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus alias et reiciendis, 
+                        cupiditate tenetur pariatur magni dolorem quasi, libero beatae accusamus similique delectus 
+                        minus id officia reprehenderit aspernatur a perferendis?
+                     </p>
+                  </div>
                </li>
                <li class="options__item">
-                  <h2>Диетическое</h2>
+                  <div class="options__pic options__pic--dietary">
+                  <h2>Для мясоедов</h2>
+                  </div>
+                  <div class="options__content">
+                     <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus alias et reiciendis, 
+                        cupiditate tenetur pariatur magni dolorem quasi, libero beatae accusamus similique delectus 
+                        minus id officia reprehenderit aspernatur a perferendis?
+                     </p>
+                  </div>
                </li>
+               
             </ul>
          </div>
       </section>
@@ -319,10 +347,29 @@
                               </div>
                            </div>
                            <div class="form__column">
-                                 <label for="" class="form__block">
+                                 <label for="" class="form__block form__block--last">
                                     <div class="form__block-title">Комментарий</div>
                                     <textarea class="form__input form__input--textarea"></textarea>
                                  </label>
+                                 <div class="form__row">   
+                                    <label class="form__radio">
+                                          <input class="form__radio-input" name="radio" type="radio" checked>
+                                          <div class="form__radio-button"></div>
+                                          <div class="form__radio-text">Потребуется сдача</div>
+                                    </label>
+                                    <label class="form__radio">
+                                       <input class="form__radio-input" name="radio" type="radio">
+                                       <span class="form__radio-button"></span>
+                                       <div class="form__radio-text">Оплата по карте</div>
+                                    </label>
+                                 </div>
+                                 <div class="form__row">
+                                    <label class="form__radio">
+                                          <input class="form__radio-input" name="" type="checkbox">
+                                          <span class="form__checkbox"></span>
+                                          <div class="form__checkbox-text">Не перезванивать</div>
+                                    </label>
+                                 </div>
                                  <button type="submit" class="btn">Заказать</button>
                                  <button type="reset">Очистить</button>
                            </div>
@@ -331,7 +378,22 @@
                </div>
          </div>
       </section>
-
+      
+      <section class="section contacts">
+         <footer class="footer">
+            <div class="container">
+               <div class="footer__content">
+               <div class="footer__left">
+                  <p>Санкт-Петербург, ул.Бабушкина, д.12/1, 15
+                     +7 (812) 377-13-77
+                  </p>
+                  <div>+7 (812) 377-13-77</div>
+               </div>
+               <div class="footer__right">   
+               </div> 
+            </div>
+         </footer>
+      </section>
       
 
       <ul class="scroolls__menu">

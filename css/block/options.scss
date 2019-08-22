@@ -15,14 +15,27 @@
    height: 100%;
 }
 
-.options__item{
-   background: url('../img/options/menu-1.png')center center / cover no-repeat;
-   width: 80px;
-   height: 100%;
+.options__item {
+   display: flex;
+}
+
+.options__item--active {
+   
+   .options__content {
+      min-width: 540px;
+      background-color: rgba($color: #2f3234, $alpha: 0.9);
+      padding: 62px 37px 0px 33px;
+      text-align: start;
+   }
+}
+
+.options__pic{
    display: flex;
    align-items: flex-end;
    justify-content: center;
-
+   width: 80px;
+   height: 100%;
+   
    >h2{
       writing-mode: vertical-lr;
       transform: rotate(180deg);
@@ -30,4 +43,21 @@
       font-family: $gagalin;
       font-size: 40px;
    }
+}
+
+.options__pic--meat{
+   background: url('../img/options/menu-1.png')center center / cover no-repeat;
+}
+
+.options__pic--vegetarian{
+   background: url('../img/options/menu-2.png')center center / cover no-repeat;
+}
+
+.options__pic--dietary{
+   background: url('../img/options/menu-3.png')center center / cover no-repeat;
+}
+
+.options__content{
+   width: 0;
+   overflow: hidden;
 }

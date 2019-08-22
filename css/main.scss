@@ -11,7 +11,7 @@ $z-fixed-menu: 100;
    position: absolute;
    top: 50%;
    left: 50%;
-   transform: translate(-50%, -50%);
+   transform: translate(-50%,-50%);
 }
 
 
@@ -32,4 +32,6 @@ $z-fixed-menu: 100;
 @import "./block/options.scss";
 @import "./block/delivery.scss";
 @import "./block/form.scss";
+@import "./block/contacts.scss";
+@import "./block/footer.scss";
 @import "./block/scrolls.scss";
