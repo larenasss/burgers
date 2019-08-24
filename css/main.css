@@ -561,11 +561,9 @@ section {
 .scroll-down-btn {
   width: 29px;
   height: 14px;
-  background: url("../img/header/arrow-scroll.png") center center/contain no-repeat;
   display: block;
   position: absolute;
-  bottom: 0;
-  bottom: 20px;
+  bottom: 40px;
   left: 50%;
   -webkit-transform: translate(-50%);
   -ms-transform: translate(-50%);
@@ -584,28 +582,47 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-right: 25px;
+  margin-right: 16px;
   text-align: center; }
   .best__item:last-child {
-    margin-right: 0;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
+    margin-right: 0; }
+    .best__item:last-child .best__item-title {
+      margin-bottom: 10px; }
 
 .best__picture {
-  margin-bottom: 27px; }
+  margin-bottom: 26px; }
+  .best__picture:last-child {
+    margin-bottom: 0; }
 
-.best__item > h4 {
-  font-family: "Lifehack-Medium";
-  font-size: 24px;
-  font-weight: 500; }
+.best__icon {
+  width: 97px;
+  height: 90px; }
+  .best__icon--meat {
+    fill: #e45028; }
+  .best__icon--hand {
+    fill: #f9b43b; }
+  .best__icon--natural {
+    fill: #8BC03F; }
 
-.best__item > p {
+.best__item-title {
+  margin-bottom: 14px; }
+  .best__item-title > h4 {
+    font-family: "Lifehack-Medium";
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: -0.6px; }
+
+.best__item-text > p {
   font-size: 14px;
+  line-height: 1.71;
   font-weight: 200;
   color: rgba(47, 50, 52, 0.8); }
 
@@ -691,8 +708,6 @@ section {
   -ms-flex-direction: column;
   flex-direction: column;
   margin-bottom: 20px; }
-  .team__item:last-child {
-    margin-bottom: 0; }
 
 .team__item--active .team__item-title {
   color: #f9b43b; }
@@ -751,7 +766,9 @@ section {
 .team__item-img {
   width: 100px;
   height: 100px;
-  border-radius: 50px; }
+  border-radius: 50px;
+  -o-object-fit: cover;
+  object-fit: cover; }
 
 .options {
   background: url("../img/options/options-bg.jpg") center center/cover no-repeat;
@@ -860,10 +877,14 @@ section {
   border-radius: 3px;
   border: none;
   padding: 8px 21px;
-  width: 100%; }
+  width: 100%;
+  outline: none;
+  border: 2px solid transparent; }
   .form__input--textarea {
     resize: none;
     height: 110px; }
+  .form__input:focus {
+    border: 2px solid #f9b43b; }
 
 .form__radio {
   display: -webkit-box;
@@ -946,6 +967,74 @@ section {
   width: 100%;
   position: absolute;
   bottom: 0; }
+
+.footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.footer__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 50%; }
+
+.footer__contacts {
+  font-family: 'UbuntuB';
+  color: #e45028;
+  font-weight: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.phone {
+  width: 12px;
+  height: 11px;
+  fill: #e45028;
+  margin-right: 10px; }
+
+.vk {
+  width: 23px;
+  height: 13px;
+  fill: #2f3234; }
+
+.fb, .inst {
+  width: 20px;
+  height: 20px;
+  fill: #2f3234; }
+
+.tw {
+  width: 20px;
+  height: 16px;
+  fill: #2f3234; }
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.social__item {
+  margin-right: 20px; }
+  .social__item:last-child {
+    margin-right: 0; }
+
+.social__link:hover > svg {
+  fill: #fff; }
 
 .scroolls__menu {
   position: fixed;

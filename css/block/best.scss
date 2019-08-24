@@ -9,28 +9,60 @@
 
 .best__item{
    display: flex;
+   flex: 1;
    flex-direction: column;
-   margin-right: 25px;
+   margin-right: 16px;
    text-align: center;
    
    &:last-child{
       margin-right: 0;
-      justify-content: center;
+
+      .best__item-title{
+         margin-bottom: 10px;
+      }
    }
 }
 
 .best__picture{
-   margin-bottom: 27px;
+   margin-bottom: 26px;
+   
+   &:last-child {
+      margin-bottom: 0;
+   }
 }
 
-.best__item >h4{
+.best__icon {
+   width: 97px;
+   height: 90px;
+
+   &--meat {
+      fill: $red;
+   }
+
+   &--hand {
+      fill: $yellow;
+   }
+
+   &--natural {
+      fill: $green;
+   }
+}
+
+.best__item-title{
+   margin-bottom: 14px;
+
+   >h4{
    font-family: $lifehack;
-   font-size: 24px;
    font-weight: 500;
+   font-size: 24px;
+   line-height: 1.17;
+   letter-spacing: -0.6px;
+   }
 }
 
-.best__item >p{
+.best__item-text>p{
    font-size: 14px;
+   line-height: 1.71;
    font-weight: 200;
    color: rgba(47, 50, 52, 0.8);
 }

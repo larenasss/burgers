@@ -5,3 +5,30 @@
    position: absolute;
    bottom: 0;
 }
+
+.footer__content {
+   display: flex;
+   justify-content: space-between;
+}
+
+.footer__right {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   width: 50%;
+}
+
+.footer__contacts {
+   font-family: 'UbuntuB';
+   color: $orange;
+   font-weight: 300;
+   display: flex;
+   align-items: center;
+}
+
+.phone {
+   width: 12px;
+   height: 11px;
+   fill: $orange;
+   margin-right: 10px;
+}
