@@ -1019,6 +1019,9 @@ section {
   background-color: rgba(47, 50, 52, 0.9);
   padding: 4.42857rem 2.64286rem 0rem 2.35714rem;
   text-align: start; }
+  @media screen and (max-width: 768px) {
+    .options__item--active .options__content {
+      display: none; } }
 
 .options__pic {
   display: -webkit-box;
