@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru_RU">
 <head>
    <meta charset="">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Burgers</title>
    <link rel="stylesheet" href="./css/main.css">
@@ -12,7 +12,7 @@
       <section class="section section--no--centered  welcome">
          <div class="container welcome__container">
             <header class="header">
-               <svg class="best__icon  best__icon--hand">
+               <svg class="header__logo">
                   <use xlink:href="./img/svg/sprite.svg#logo"></use>
                </svg>
                   <div class="header__buttons">
@@ -43,6 +43,9 @@
                      <div class="btn">
                         <a href="" class="menu__link">Заказать</a>
                      </div>
+                     <button class="button-burger">
+                           <div class="button-burger__list"></div>
+                     </button>
                      </nav>
                   </div>
             </header>
@@ -55,12 +58,12 @@
                      <h2 class="welcome__subtitle">натуральные бургеры</h2>
                   </div>
                </div>
-         </div>
          <a href="" class="scroll-down-link">
             <svg class="scroll-down-btn">
                <use xlink:href="./img/svg/sprite.svg#scroll-down-btn"></use>
             </svg>
          </a>
+      </div>
       </section>
 
       <section class="section best">
@@ -73,14 +76,16 @@
                            <use xlink:href="./img/svg/sprite.svg#meat"></use>
                         </svg>
                      </div>
-                     <div class="best__item-title">
-                     <h4>100% свежее мясо</h4> 
-                     </div>
-                     <div class="best__item-text">
-                        <p>
-                           Драма представляет собой деструктивный цикл.
-                           Анапест представляет собой анапест. Ямб неравномерен.
-                        </p>
+                     <div class="best__desk">
+                        <div class="best__item-title">
+                        <h4>100% свежее мясо</h4> 
+                        </div>
+                        <div class="best__item-text">
+                           <p>
+                              Драма представляет собой деструктивный цикл.
+                              Анапест представляет собой анапест. Ямб неравномерен.
+                           </p>
+                        </div>
                      </div>
                      <li class="best__item">
                         <div class="best__picture">
@@ -88,13 +93,15 @@
                               <use xlink:href="./img/svg/sprite.svg#hand"></use>
                            </svg>
                         </div>
-                        <div class="best__item-title">
-                        <h4>Ручная сборка</h4>
-                        </div>
-                        <div class="best__item-text">
-                           <p>
-                              Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.
-                           </p>
+                        <div class="best__desk">
+                           <div class="best__item-title">
+                           <h4>Ручная сборка</h4>
+                           </div>
+                           <div class="best__item-text">
+                              <p>
+                                 Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.
+                              </p>
+                           </div>
                         </div>
                      <li class="best__item">
                         <div class="best__picture">
@@ -102,14 +109,15 @@
                               <use xlink:href="./img/svg/sprite.svg#natural"></use>
                            </svg>
                         </div>
-                        <div class="best__item-title">
-                        <h4>Натуральные ингредиенты</h4>
-                        </div>
-                        <div class="best__item-text">
-                           <p>
-                              Драма представляет собой деструктивный цикл.
-                              Анапест представляет собой анапест. Ямб неравномерен.
-                           </p>
+                        <div class="best__desk">
+                           <div class="best__item-title">
+                           <h4>Натуральные ингредиенты</h4>
+                           </div>
+                           <div class="best__item-text">
+                              <p>
+                                 Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
+                              </p>
+                           </div>
                         </div>
                      </li>
                </ul>
@@ -118,18 +126,16 @@
 
       <section class="section team">
          <div class="team__block">
-            <div class="container team__container">
             <div class="team__content">
-               <h1 class="title team__title">Команда</h1>
-               <div class="team__accordeon">  
-                  <ul class="team__menu">
-                     <li class="team__item">
-                        <h3 class="team__item-title">Дэниэл редклиф</h3>
-                        <div class="team__item-content">
-                           <div class="team__item-pic">
-                              <img src="./img/team/team-logo_1.jpg" alt="" class="team__item-img">
+               <h1 class="title team__title">Команда</h1>  
+               <ul class="accordeon">
+                     <li class="accordeon__item">
+                        <a href="#" class="accordeon__item-title">Дэниэл редклиф</a>
+                        <div class="accordeon__item-content">
+                           <div class="accordeon__item-pic">
+                              <img src="./img/team/team-logo_1.jpg" alt="" class="accordeon__item-img">
                            </div>
-                           <div class="team__item-info">
+                           <div class="accordeon__item-info">
                               <h5>Оператор</h5>
                               <p>
                                  C радостью поможем подобрать идеальный бургер и оформить заказ   
@@ -137,13 +143,13 @@
                            </div>
                         </div>
                      </li>
-                     <li class="team__item team__item--active">
-                        <h3 class="team__item-title">Ричард Джеймс</h3>
-                        <div class="team__item-content">
-                           <div class="team__item-pic">
-                              <img src="./img/team/team-logo_1.jpg" alt="" class="team__item-img">
+                     <li class="accordeon__item accordeon__item--active">
+                        <a href="#" class="accordeon__item-title">Ричард Джеймс</a>
+                        <div class="accordeon__item-content">
+                           <div class="accordeon__item-pic">
+                              <img src="./img/team/team-logo_1.jpg" alt="" class="accordeon__item-img">
                            </div>
-                           <div class="team__item-info">
+                           <div class="accordeon__item-info">
                               <h5>Оператор</h5>
                               <p>
                                  C радостью поможем подобрать идеальный бургер и оформить заказ   
@@ -151,13 +157,13 @@
                            </div>
                         </div>
                      </li>
-                     <li class="team__item">
-                        <h3 class="team__item-title">Джейк Фин</h3>
-                        <div class="team__item-content">
-                           <div class="team__item-pic">
-                              <img src="./img/team/team-logo_1.jpg" alt="" class="team__item-img">
+                     <li class="accordeon__item">
+                        <a href="#" class="accordeon__item-title">Джейк Финн</a>
+                        <div class="accordeon__item-content">
+                           <div class="accordeon__item-pic">
+                              <img src="./img/team/team-logo_1.jpg" alt="" class="accordeon__item-img">
                            </div>
-                           <div class="team__item-info">
+                           <div class="accordeon__item-info">
                               <h5>Оператор</h5>
                               <p>
                                  C радостью поможем подобрать идеальный бургер и оформить заказ   
@@ -165,13 +171,13 @@
                            </div>
                         </div>
                      </li>
-                     <li class="team__item">
-                        <h3 class="team__item-title">Николай иванов</h3>
-                        <div class="team__item-content">
-                           <div class="team__item-pic">
-                              <img src="./img/team/team-logo_1.jpg" alt="" class="team__item-img">
+                     <li class="accordeon__item">
+                        <a href="#" class="accordeon__item-title">Николай иванов</a>
+                        <div class="accordeon__item-content">
+                           <div class="accordeon__item-pic">
+                              <img src="./img/team/team-logo_1.jpg" alt="" class="accordeon__item-img">
                            </div>
-                           <div class="team__item-info">
+                           <div class="accordeon__item-info">
                               <h5>Оператор</h5>
                               <p>
                                  C радостью поможем подобрать идеальный бургер и оформить заказ   
@@ -179,22 +185,21 @@
                            </div>
                         </div>
                      </li>
-                    
-                  </ul>
-                  </div>
+               </ul>
                </div>
             </div>
-         </div>
       </section>
 
       <section class="section options">
          <h1 class="title title__options">Меню</h1>
          <div class="options__accordeon">
             <ul class="options__menu">
-               <li class="options__item options__item--active">
-                  <div class="options__pic options__pic--meat">
-                  <h2>Для мясоедов</h2>
+               <li class="options__item">
+                  <button class="options__pic options__pic--meat">
+                  <div class="options__item-title">   
+                     <h2>Для мясоедов</h2>
                   </div>
+                  </button>
                   <div class="options__content">
                      <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus alias et reiciendis, 
@@ -204,9 +209,11 @@
                   </div>
                </li>
                <li class="options__item">
-                  <div class="options__pic options__pic--vegetarian">
-                  <h2>Для мясоедов</h2>
+                  <button class="options__pic options__pic--vegetarian">
+                  <div class="options__item-title">
+                     <h2>Вегетарианское</h2>
                   </div>
+                  </button>
                   <div class="options__content">
                      <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus alias et reiciendis, 
@@ -216,9 +223,11 @@
                   </div>
                </li>
                <li class="options__item">
-                  <div class="options__pic options__pic--dietary">
-                  <h2>Для мясоедов</h2>
+                  <button class="options__pic options__pic--dietary">
+                  <div class="options__item-title">
+                     <h2>Диетическое</h2>
                   </div>
+                  </button>
                   <div class="options__content">
                      <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus alias et reiciendis, 
@@ -329,7 +338,7 @@
 
       <section class="section delivery">
          <div class="container">
-            <div class="title title--centered">Закажите доставку</div>
+            <div class="title form__title  title--centered">Закажите доставку</div>
                <div class="form">
                      <form action="" class="form__elem">
                         <div class="form__content">
@@ -374,7 +383,8 @@
                                     <div class="form__block-title">Комментарий</div>
                                     <textarea class="form__input form__input--textarea"></textarea>
                                  </label>
-                                 <div class="form__row">   
+                                 <div class="form__buttons">
+                                 <div class="form__row form__row--radio-ckick">   
                                     <label class="form__radio">
                                           <input class="form__radio-input" name="radio" type="radio" checked>
                                           <div class="form__radio-button"></div>
@@ -393,9 +403,12 @@
                                           <div class="form__checkbox-text">Не перезванивать</div>
                                     </label>
                                  </div>
-                                 <button type="submit" class="btn">Заказать</button>
+                                 </div>
+                                 <div class="form__buttons-click">
+                                 <button type="submit" class="btn form__btn">Заказать</button>
                                  <button type="reset">Очистить</button>
-                           </div>
+                                 </div>
+                        </div>
                         </div>
                      </form>
                </div>
@@ -415,9 +428,7 @@
                      <svg class="phone">
                         <use xlink:href="./img/svg/sprite.svg#phone"></use>
                      </svg>
-                     <p>
-                        +7 (812) 377-13-77
-                     </p>
+                     <a href="tel:+78123771377"class="footer__link">+7 (812) 377-13-77</a>
                   </div>
                </div>
                <div class="footer__right">
@@ -484,6 +495,8 @@
          </li>
       
       </ul>
+
+   
    </div>
 </body>
 </html>

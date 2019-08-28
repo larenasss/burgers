@@ -16,10 +16,27 @@ $z-fixed-menu: 100;
    transform: translate(-50%,-50%);
 }
 
+@function rem($px) {
+   @return $px / 14px + 0rem; 
+}
+
+@mixin tablets {
+   @media screen and (max-width: 768px) {
+      @content;
+   }
+}
+
+@mixin phone {
+   @media screen and (max-width: 480px) {
+      @content;
+   }
+}
+
 
 @import "./layout/normalize.scss";
 @import "./layout/fonts.scss";
 @import "./layout/base.scss";
+
 
 @import "./block/section.scss";
 @import "./block/welcome.scss";
@@ -38,3 +55,4 @@ $z-fixed-menu: 100;
 @import "./block/footer.scss";
 @import "./block/social-list.scss";
 @import "./block/scrolls.scss";
+@import "./block/button-burger.scss";

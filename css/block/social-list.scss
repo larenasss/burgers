@@ -1,18 +1,18 @@
 .vk {
-   width: 23px;
-   height: 13px;
+   width: rem(23px);
+   height: rem(13px);
    fill: #2f3234;
 }
 
 .fb,.inst{
-   width: 20px;
-   height: 20px;
+   width: rem(20px);
+   height: rem(20px);
    fill: #2f3234;
 }
 
 .tw {
-   width: 20px;
-   height: 16px;
+   width: rem(20px);
+   height: rem(16px);
    fill: #2f3234;
 }
  
@@ -22,7 +22,7 @@
 }
 
 .social__item {
-   margin-right: 20px;
+   margin-right: rem(20px);
 
    &:last-child {
       margin-right: 0;

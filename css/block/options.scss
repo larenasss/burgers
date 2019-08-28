@@ -11,7 +11,6 @@
 
 .options__menu{
    display: flex;
-   text-align: end;
    height: 100%;
 }
 
@@ -21,28 +20,22 @@
 
 .options__item--active {
    
+   .options__item-title {
+      color: $yellow;
+   }
+   
    .options__content {
-      min-width: 540px;
+      min-width: rem(540px);
       background-color: rgba($color: #2f3234, $alpha: 0.9);
-      padding: 62px 37px 0px 33px;
+      padding: rem(62px) rem(37px) rem(0px) rem(33px);
       text-align: start;
    }
 }
 
 .options__pic{
    display: flex;
-   align-items: flex-end;
    justify-content: center;
-   width: 80px;
-   height: 100%;
-   
-   >h2{
-      writing-mode: vertical-lr;
-      transform: rotate(180deg);
-      margin-bottom: 40px;
-      font-family: $gagalin;
-      font-size: 40px;
-   }
+   width: rem(80px);
 }
 
 .options__pic--meat{
@@ -55,6 +48,18 @@
 
 .options__pic--dietary{
    background: url('../img/options/menu-3.png')center center / cover no-repeat;
+}
+
+.options__item-title{
+   display: flex;
+   align-content: center;
+   writing-mode: vertical-lr;
+   transform: rotate(180deg);
+   font-family: $gagalin;
+   font-size: rem(24px);
+   white-space: nowrap;
+   height: 100%;
+   margin-top: rem(-50px);
 }
 
 .options__content{

@@ -1,10 +1,14 @@
 .title{
    font-family: $gagalin;
-   font-size: 72px;
+   font-size: rem(72px);
    color: #f9b43b;
    font-weight: 500;
-   margin-bottom: 22px;
+   margin-bottom: rem(22px);
    line-height: 1;
+
+   @include phone {
+      font-size: rem(63px);
+   }
 
    &--color {
       &--black {
@@ -22,15 +26,44 @@
 }
 
 .title__best{
-   margin-bottom: 45px;
+   margin-bottom: rem(45px);
+
+   @include phone {
+      font-size: rem(50px);
+      margin-bottom: rem(30px);
+   }
 }
 
 .title__options{
    position: absolute;
-   top: 111px;
-   left: 102px;
+   top: rem(111px);
+   left: rem(102px);
+
+   @include tablets {
+      color: #fff;
+   }
+
+   @include phone {
+      font-size: rem(50.5px);
+      top: rem(60px);
+      left: rem(40px);
+   }
 }
 
 .team__title{
-   margin-bottom: 46px;
+   margin-bottom: rem(46px);
+
+   @include phone {
+      font-size: rem(50.5px);
+      margin-bottom: rem(28px);
+   }
+}
+
+.form__title {
+   margin-bottom: rem(48px);
+
+   @include phone {
+      font-size: rem(50.5px);
+      line-height: 1.2;
+   }
 }

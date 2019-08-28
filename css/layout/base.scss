@@ -1,6 +1,7 @@
 html {
   height: 100%;
   width: 100%;
+  font-size: 14px;
 }
  
 body {
@@ -11,7 +12,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
-  height: 100%;
   color: white;
 }
  
@@ -27,7 +27,7 @@ ul > li{
 p {
   margin: 0;
   padding: 0;
-  line-height: 30px;
+  line-height: rem(30px);
 }
   
 * {
@@ -46,19 +46,25 @@ button {
 }
  
 .wrapper {
-  min-width: 940px + 20px;
+  width: 100%;
   min-height: 100%;
-  display: flex;
-  flex-direction: column;
+  overflow: hidden;
 }
 
 .container {
-  width: 942px;
+  width: 100%;
+  max-width: 940px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-}
 
-.team__container{
-  width: 370px;
+  @include tablets {
+    width: 95%;
+  }
+
+  @include phone {
+    width: 100%;
+  }
+
+
 }

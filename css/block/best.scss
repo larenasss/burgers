@@ -5,26 +5,48 @@
 
 .best__list{
    display: flex;
+
+   @include phone {
+      flex-direction: column;
+      padding: 0 2%;
+   }
 }
 
 .best__item{
    display: flex;
    flex: 1;
    flex-direction: column;
-   margin-right: 16px;
+   margin-right: rem(16px);
    text-align: center;
+
+   @include phone {
+      flex-direction: row;
+      margin-right: 0;
+      margin-bottom: rem(48px);
+      text-align: left;
+
+      &:last-child {
+         margin-bottom: 0;
+      }
+   }
    
    &:last-child{
       margin-right: 0;
 
       .best__item-title{
-         margin-bottom: 10px;
+         margin-bottom: rem(10px);
       }
    }
 }
 
+
 .best__picture{
-   margin-bottom: 26px;
+   margin-bottom: rem(26px);
+
+   @include phone {
+      margin-bottom: 0;
+      margin-right: rem(30px);
+   }
    
    &:last-child {
       margin-bottom: 0;
@@ -32,8 +54,8 @@
 }
 
 .best__icon {
-   width: 97px;
-   height: 90px;
+   width: rem(97px);
+   height: rem(90px);
 
    &--meat {
       fill: $red;
@@ -49,19 +71,18 @@
 }
 
 .best__item-title{
-   margin-bottom: 14px;
+   margin-bottom: rem(14px);
 
    >h4{
    font-family: $lifehack;
    font-weight: 500;
-   font-size: 24px;
+   font-size: rem(24px);
    line-height: 1.17;
-   letter-spacing: -0.6px;
+   letter-spacing: -rem(0.6px);
    }
 }
 
 .best__item-text>p{
-   font-size: 14px;
    line-height: 1.71;
    font-weight: 200;
    color: rgba(47, 50, 52, 0.8);

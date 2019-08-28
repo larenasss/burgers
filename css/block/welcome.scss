@@ -5,26 +5,65 @@
 
 .welcome__container{
    height: 100%;
+   display: flex;
 }
 
 .welcome__content{
    display: flex;
    align-items: center;
    flex: .8;
+
+   @include tablets {
+      flex-direction: column;
+      padding: 0 10%;
+      height: 100%;
+      justify-content: space-around;
+   }
+
+   @include phone {
+      justify-content: center;
+   }
 }
 
 .welcome__content-pic{
-   margin-right: 12px;
+   margin-right: rem(12px);
+
+   @include tablets {
+      margin-right: 0;
+   }
+
+   @include phone {
+      margin-bottom: rem(46px);
+   }
+}
+
+.welcome_img {
+   width: 100%;
+   height: 100%;
 }
 
 .welcome__desk{
-   padding-top: 75px;
+   padding-top: rem(75px);
+   width: 50%;
+
+   @include tablets {
+      width: 100%;
+      padding-top: 0;
+      text-align: center;
+   }
 }
 
 .welcome__subtitle{
    font-family: $lifehack;
-   font-size: 65px;
+   font-size: rem(65px);
    font-weight: 200;
    line-height: 1;
-   letter-spacing: -1.63px;
+   letter-spacing: -rem(1.63px);
+
+   @include phone {
+      font-size: rem(54px);
+   }
 }
+
+
+
