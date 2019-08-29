@@ -32,6 +32,18 @@ $z-fixed-menu: 100;
    }
 }
 
+@mixin phone-x {
+   @media screen and (max-width: 375px) {
+      @content;
+   }
+}
+
+@mixin phone-se {
+   @media screen and (max-width: 320px) {
+      @content;
+   }
+}
+
 
 @import "./layout/normalize.scss";
 @import "./layout/fonts.scss";

@@ -10,6 +10,17 @@
       font-size: rem(63px);
    }
 
+   @include phone-x {
+      font-size: rem(45px);
+   }
+
+   @include phone-se {
+      font-size: rem(45px);
+      margin-bottom: rem(5px);
+   }
+
+   
+
    &--color {
       &--black {
          color: #2f3234;
@@ -32,6 +43,10 @@
       font-size: rem(50px);
       margin-bottom: rem(30px);
    }
+
+   @include phone-se {
+      font-size: rem(40px);
+   }
 }
 
 .title__options{
@@ -48,6 +63,12 @@
       top: rem(60px);
       left: rem(40px);
    }
+
+   @include phone-se {
+      font-size: rem(40px);
+      top: rem(50px);
+      left: rem(30px);
+   }
 }
 
 .team__title{
@@ -57,6 +78,10 @@
       font-size: rem(50.5px);
       margin-bottom: rem(28px);
    }
+
+   @include phone-se {
+      font-size: rem(40px);
+   }
 }
 
 .form__title {
@@ -65,5 +90,10 @@
    @include phone {
       font-size: rem(50.5px);
       line-height: 1.2;
+   }
+
+   @include phone-se {
+      font-size: rem(40px);
+      margin-bottom: rem(5px);
    }
 }

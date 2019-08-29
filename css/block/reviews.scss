@@ -45,6 +45,10 @@
       flex-direction: column;
       justify-content: center;
    }
+
+   @include phone-se {
+      padding: rem(10px) rem(20px);
+   }
 }
 
 .reviews__title{
@@ -59,6 +63,10 @@
 
    @include phone {
       font-size: rem(24px);
+   }
+
+   @include phone-se {
+      font-size: rem(18px);
    }
 }
 

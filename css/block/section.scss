@@ -5,6 +5,10 @@ section{
    flex-direction: column;
    justify-content: center;
 
+   @include phone-se {
+      min-height: inherit;
+   }
+
    &--no--centered {
       justify-content: flex-start;
    }

@@ -6,6 +6,7 @@
 .welcome__container{
    height: 100%;
    display: flex;
+   justify-content: flex-start;
 }
 
 .welcome__content{
@@ -21,6 +22,15 @@
    }
 
    @include phone {
+      justify-content: flex-start;
+   }
+
+   @include phone-x {
+      justify-content: center;
+   }
+
+   @include phone-se {
+      padding: 0 20%;
       justify-content: center;
    }
 }
@@ -34,6 +44,10 @@
 
    @include phone {
       margin-bottom: rem(46px);
+   }
+
+   @include phone-se {
+      margin-bottom: rem(20px);
    }
 }
 
@@ -62,6 +76,14 @@
 
    @include phone {
       font-size: rem(54px);
+   }
+
+   @include phone-x {
+      font-size: rem(40px);
+   }
+
+   @include phone-se {
+      font-size: rem(32px);
    }
 }
 

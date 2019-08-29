@@ -54,6 +54,10 @@
    @include phone {
       margin-bottom: rem(18px);
    }
+
+   @include phone {
+      margin-bottom: rem(10px);
+   }
 }
 
 .accordeon__item--active{
@@ -117,6 +121,10 @@
 
    @include phone {
       margin-bottom: rem(12px);
+    }
+
+   @include phone-se {
+      font-size: rem(18px);
     }
 }
 

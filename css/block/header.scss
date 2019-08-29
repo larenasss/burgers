@@ -5,8 +5,8 @@
    padding-top: rem(8px);
 
    @include phone {
-      margin-bottom: rem(22px);
       padding: 0 3%;
+      padding-top: rem(8px);
    }
 }
 

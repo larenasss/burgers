@@ -40,7 +40,7 @@
 .options__pic{
    display: flex;
    justify-content: center;
-   width: rem(80px);
+   max-width: rem(80px);
 }
 
 .options__pic--meat{
@@ -65,6 +65,10 @@
    white-space: nowrap;
    height: 100%;
    margin-top: rem(-50px);
+
+   @include phone-se {
+      font-size: rem(20px);
+   }
 }
 
 .options__content{

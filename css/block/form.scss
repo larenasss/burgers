@@ -28,6 +28,10 @@
          margin-bottom: 0;
       }
    }
+
+   @include phone-se {
+      margin-bottom: 0;
+   }
 }
 
 .form__row {
@@ -46,6 +50,10 @@
       }
    }
 
+   @include phone-se {
+      margin-bottom: 0;
+   }
+
    &--radio-ckick {
       margin-bottom: rem(20px);
       
@@ -55,6 +63,10 @@
 
       @include phone {
          margin-bottom: rem(32px);
+      }
+
+      @include phone-se {
+         margin-bottom: rem(5px);
       }
    }  
 }
@@ -85,6 +97,10 @@
       @include phone {
          margin-bottom: rem(30px);
       }
+
+      @include phone-se {
+         margin-bottom: rem(5px);
+      }
    }   
 }
 
@@ -104,6 +120,11 @@
    &--textarea {
       resize: none;
       height: rem(110px);
+
+      @include phone-se {
+         height: rem(80px);
+         padding: rem(4px) rem(21px);
+      }
    }
 
    &:focus {
@@ -133,6 +154,10 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+   }
+
+   @include phone-se {
+      margin-bottom: rem(5px);
    }
 }
 
