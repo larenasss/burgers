@@ -1,26 +1,39 @@
 .menu{
    display: flex;
+   font-family: 'Ubuntu-Medium';
+
+   @include phone {
+    align-items: center;
+   }
+
+   @include tablets {
+    align-items: center;
+   }
 }
 
 .menu__list {
    display: flex;
    align-items: center;
-   margin-right: 15px;
+   margin-right: rem(15px);
+
+   @include tablets {
+      display: none;
+   }
 }
 
 .menu__item{
    display: flex;
    align-items: center;
-   margin-right: 16px;
+   margin-right: rem(16px);
 
    &:before{ 
       content: "";
-      width: 4px;
-      height: 4px;
+      width: rem(4px);
+      height: rem(4px);
       background: #fff;
       border-radius: 50%;
       display: block;
-      margin-right: 16px;
+      margin-right: rem(16px);
    }
 
    &:first-child {
@@ -38,5 +51,5 @@
    color: white;
    text-decoration: none;
    text-transform: uppercase;
-   font-size: 13px;
+   font-size: rem(13px);
 }

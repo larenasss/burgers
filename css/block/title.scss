@@ -1,10 +1,25 @@
 .title{
    font-family: $gagalin;
-   font-size: 72px;
+   font-size: rem(72px);
    color: #f9b43b;
    font-weight: 500;
-   margin-bottom: 22px;
+   margin-bottom: rem(22px);
    line-height: 1;
+
+   @include phone {
+      font-size: rem(63px);
+   }
+
+   @include phone-x {
+      font-size: rem(45px);
+   }
+
+   @include phone-se {
+      font-size: rem(45px);
+      margin-bottom: rem(5px);
+   }
+
+   
 
    &--color {
       &--black {
@@ -22,5 +37,63 @@
 }
 
 .title__best{
-   margin-bottom: 45px;
+   margin-bottom: rem(45px);
+
+   @include phone {
+      font-size: rem(50px);
+      margin-bottom: rem(30px);
+   }
+
+   @include phone-se {
+      font-size: rem(40px);
+   }
+}
+
+.title__options{
+   position: absolute;
+   top: rem(111px);
+   left: rem(102px);
+
+   @include tablets {
+      color: #fff;
+   }
+
+   @include phone {
+      font-size: rem(50.5px);
+      top: rem(60px);
+      left: rem(40px);
+   }
+
+   @include phone-se {
+      font-size: rem(40px);
+      top: rem(50px);
+      left: rem(30px);
+   }
+}
+
+.team__title{
+   margin-bottom: rem(46px);
+
+   @include phone {
+      font-size: rem(50.5px);
+      margin-bottom: rem(28px);
+   }
+
+   @include phone-se {
+      font-size: rem(40px);
+   }
+}
+
+.form__title {
+   margin-bottom: rem(48px);
+
+   @include phone {
+      font-size: rem(50.5px);
+      line-height: 1.2;
+   }
+
+   @include phone-se {
+      font-size: rem(40px);
+      margin-bottom: rem(5px);
+   }
 }

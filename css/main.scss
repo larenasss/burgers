@@ -1,6 +1,8 @@
 $black: #2f3234;
 $yellow: #f9b43b;
 $orange: #e45028;
+$red: #e45028;
+$green: #8BC03F;
 
 $gagalin: 'GagalinRegular';
 $lifehack: 'Lifehack-Medium';
@@ -11,13 +13,42 @@ $z-fixed-menu: 100;
    position: absolute;
    top: 50%;
    left: 50%;
-   transform: translate(-50%, -50%);
+   transform: translate(-50%,-50%);
+}
+
+@function rem($px) {
+   @return $px / 14px + 0rem; 
+}
+
+@mixin tablets {
+   @media screen and (max-width: 768px) {
+      @content;
+   }
+}
+
+@mixin phone {
+   @media screen and (max-width: 480px) {
+      @content;
+   }
+}
+
+@mixin phone-x {
+   @media screen and (max-width: 375px) {
+      @content;
+   }
+}
+
+@mixin phone-se {
+   @media screen and (max-width: 320px) {
+      @content;
+   }
 }
 
 
 @import "./layout/normalize.scss";
 @import "./layout/fonts.scss";
 @import "./layout/base.scss";
+
 
 @import "./block/section.scss";
 @import "./block/welcome.scss";
@@ -29,4 +60,11 @@ $z-fixed-menu: 100;
 @import "./block/best.scss";
 @import "./block/reviews.scss";
 @import "./block/team.scss";
+@import "./block/options.scss";
+@import "./block/delivery.scss";
+@import "./block/form.scss";
+@import "./block/contacts.scss";
+@import "./block/footer.scss";
+@import "./block/social-list.scss";
 @import "./block/scrolls.scss";
+@import "./block/button-burger.scss";
