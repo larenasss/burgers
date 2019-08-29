@@ -783,11 +783,15 @@ section {
       margin-bottom: 0.71429rem; }
 
 .best__picture {
-  margin-bottom: 1.85714rem; }
+  margin-right: 1.85714rem; }
   @media screen and (max-width: 480px) {
     .best__picture {
-      margin-bottom: 0;
-      margin-right: 2.14286rem; } }
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
   .best__picture:last-child {
     margin-bottom: 0; }
 
@@ -806,6 +810,9 @@ section {
 
 .best__item-title {
   margin-bottom: 1rem; }
+  @media screen and (max-width: 320px) {
+    .best__item-title {
+      margin-bottom: 0; } }
   .best__item-title > h4 {
     font-family: "Lifehack-Medium";
     font-weight: 500;

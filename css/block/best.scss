@@ -45,11 +45,12 @@
 
 
 .best__picture{
-   margin-bottom: rem(26px);
+   margin-right: rem(26px);
+   
 
    @include phone {
-      margin-bottom: 0;
-      margin-right: rem(30px);
+      display: flex;
+      align-items: center;
    }
    
    &:last-child {
@@ -80,6 +81,10 @@
 
 .best__item-title{
    margin-bottom: rem(14px);
+
+   @include phone-se{
+      margin-bottom: 0;
+   }
 
    >h4{
    font-family: $lifehack;
