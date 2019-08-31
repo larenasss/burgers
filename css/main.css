@@ -683,6 +683,10 @@ section {
     .title__best {
       font-size: 2.85714rem; } }
 
+.title__burger {
+  margin-bottom: 3.57143rem;
+  line-height: 0.89; }
+
 .title__options {
   position: absolute;
   top: 7.92857rem;
@@ -828,6 +832,135 @@ section {
   line-height: 1.71;
   font-weight: 200;
   color: rgba(47, 50, 52, 0.8); }
+
+.burgers {
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f9b43b), color-stop(#eb8c38), to(#f9b43b));
+  background-image: -webkit-linear-gradient(#f9b43b, #eb8c38, #f9b43b);
+  background-image: -o-linear-gradient(#f9b43b, #eb8c38, #f9b43b);
+  background-image: linear-gradient(#f9b43b, #eb8c38, #f9b43b); }
+
+.container__burgers {
+  position: relative;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.burgers__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  position: relative; }
+
+.burger__item {
+  width: 90px;
+  height: 90px;
+  border-radius: 5px;
+  background-color: #f08c33;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  left: 22px;
+  top: -45px; }
+
+.burger {
+  width: 46px;
+  height: 44px; }
+
+.burger__item-kkal {
+  position: absolute;
+  left: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.kkal {
+  width: 60px;
+  height: 60px; }
+
+.burger__item-title {
+  text-transform: uppercase;
+  font-family: "GagalinRegular";
+  font-size: 14px;
+  font-weight: 100; }
+
+.burger-icon {
+  width: 46px;
+  height: 44px; }
+
+.burgers__text {
+  margin-bottom: 20px; }
+  .burgers__text > p {
+    line-height: 1.71; }
+
+.burgers__order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end; }
+
+.burgers__price {
+  color: #e45028;
+  font-size: 72px;
+  font-family: "GagalinRegular";
+  line-height: 0.93;
+  margin-right: 5px; }
+
+.burgers__price-rub {
+  color: #e45028;
+  font-size: 30px;
+  font-family: "GagalinRegular";
+  margin-right: 28px;
+  letter-spacing: -0.75px; }
+
+.burgers__scroll-left {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg); }
+
+.burgers__scroll {
+  width: 2.07143rem;
+  height: 1rem; }
+
+.burgers__scroll-right {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: -70px;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg); }
 
 .reviews__list {
   display: -webkit-box;

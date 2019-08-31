@@ -1,0 +1,111 @@
+.burgers {
+   height: 100vh;
+   background-image: linear-gradient(#f9b43b,#eb8c38,#f9b43b);
+}
+
+.container__burgers {
+   position: relative;
+   height: 100%;
+   justify-content: center;
+}
+
+.burgers__block {
+   display: flex;
+   align-items: flex-end;
+   position: relative;
+}
+
+.burger__item {
+   width: 90px;
+   height: 90px;
+   border-radius: 5px;
+   background-color: #f08c33;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   left: 22px;
+   top: -45px;
+}
+
+.burger {
+   width: 46px;
+   height: 44px;
+}
+
+.burger__item-kkal {
+   position: absolute;
+   left: 22px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.kkal {
+   width: 60px;
+   height: 60px;
+}
+
+.burger__item-title{
+   text-transform: uppercase;
+   font-family: $gagalin;
+   font-size: 14px;
+   font-weight: 100;
+}
+
+.burger-icon {
+   width: 46px;
+   height: 44px;
+}
+
+.burgers__text {
+   margin-bottom: 20px;
+
+   & >p{
+   line-height: 1.71;
+   }
+}
+
+.burgers__order {
+   display: flex;
+   align-items: flex-end;
+}
+
+.burgers__price {
+   color: $red;
+   font-size: 72px;
+   font-family: $gagalin;
+   line-height: 0.93;
+   margin-right: 5px;
+}
+
+.burgers__price-rub {
+   color: $red;
+   font-size: 30px;
+   font-family: $gagalin;
+   margin-right: 28px;
+   letter-spacing: -0.75px;
+} 
+
+.burgers__scroll-left {
+   display: block;
+   position: absolute;
+   top: 50%;
+   left: -15px;
+   transform: rotate(90deg);
+}
+
+.burgers__scroll {
+   width: rem(29px);
+   height: rem(14px);
+}
+
+.burgers__scroll-right {
+   display: block;
+   position: absolute;
+   top: 50%;
+   right: -70px;
+   transform: rotate(-90deg);
+}
