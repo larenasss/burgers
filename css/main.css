@@ -871,18 +871,19 @@ section {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   position: absolute;
   left: 22px;
   top: -45px; }
 
 .burger {
   width: 46px;
-  height: 44px; }
+  height: 56px;
+  margin-bottom: 5px; }
 
 .burger__item-kkal {
+  width: 90px;
+  height: 90px;
+  border-radius: 5px;
   position: absolute;
   left: 22px;
   display: -webkit-box;
