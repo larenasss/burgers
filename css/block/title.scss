@@ -52,6 +52,21 @@
 .title__burger {
    margin-bottom: rem(50px);
    line-height: 0.89;
+
+   @include tablets {
+      margin-bottom: rem(52px);
+   }
+
+   @include phone {
+      margin-bottom: rem(15px);
+      font-size: rem(50px);
+      line-height: 1.14;
+      padding: 0 6%;
+   }
+
+   @include phone-se {
+      font-size: rem(40px);
+   }
 }
 
 .title__options{

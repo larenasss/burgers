@@ -15,7 +15,7 @@
                <svg class="header__logo">
                   <use xlink:href="./img/svg/sprite.svg#logo"></use>
                </svg>
-                  <div class="header__buttons">
+               <div class="header__buttons">
                      <nav class="menu">
                         <ul class="menu__list">
                            <li class="menu__item">
@@ -126,25 +126,103 @@
 
       <section class="section burgers">
          <div class="container container__burgers">
-            <a href="" class="burgers__scroll-left">
-               <svg class="burgers__scroll">
-                  <use xlink:href="./img/svg/sprite.svg#scroll-down-btn"></use>
-               </svg>
-            </a>
-            <div class="burgers__block">
+            <div class="burgers__slider">
+               <a href="" class="burgers__scroll-left">
+                  <svg class="burgers__scroll">
+                     <use xlink:href="./img/svg/sprite.svg#scroll-down-btn"></use>
+                  </svg>
+               </a>
+               <a href="" class="burgers__scroll-right">
+                  <svg class="burgers__scroll">
+                     <use xlink:href="./img/svg/sprite.svg#scroll-down-btn"></use>
+                  </svg>
+               </a>
+            </div>
+            <ul class="burgers__list">
+               <li class="burgers__block"> 
                <div class="burger__menu">
-                  <div class="burger__item">
+                  <button class="burger__button burger__button--menu">
                      <svg class="burger">
-                           <use xlink:href="./img/svg/sprite.svg#burger"></use>
+                           <use xlink:href="./img/svg/sprite-burger.svg#burger"></use>
                      </svg>
                      <h5 class="burger__item-title">Состав</h5>
-                  </div>
+                  </button>
+                  <ul class="composition">
+                     <li class="composition__item">
+                        <div class="composition__pic">
+                           <svg class="composition__img">
+                              <use xlink:href="./img/svg/sprite-burger.svg#beef"></use>
+                           </svg>
+                        </div>
+                        <div class="composition__item-cont">
+                           <span class="composition__name">Говядина</span>
+                           <span class="composition__weight">300г</span>
+                        </div>  
+                     </li>
+                     <li class="composition__item">
+                        <div class="composition__pic">
+                           <svg class="composition__img">
+                              <use xlink:href="./img/svg/sprite-burger.svg#buns"></use>
+                           </svg>
+                        </div>
+                        <div class="composition__item-cont">
+                           <span class="composition__name">Булочки</span>
+                           <span class="composition__weight">100г</span>
+                        </div>  
+                     </li>
+                     <li class="composition__item">
+                        <div class="composition__pic">
+                           <svg class="composition__img">
+                              <use xlink:href="./img/svg/sprite-burger.svg#salad"></use>
+                           </svg>
+                        </div>
+                        <div class="composition__item-cont">
+                           <span class="composition__name">Зелень</span>
+                           <span class="composition__weight">70г</span>
+                        </div>  
+                     </li>
+                     <li class="composition__item">
+                        <div class="composition__pic">
+                           <svg class="composition__img">
+                              <use xlink:href="./img/svg/sprite-burger.svg#sauce"></use>
+                           </svg>
+                        </div>
+                        <div class="composition__item-cont">
+                           <span class="composition__name">Соус</span>
+                           <span class="composition__weight">150г</span>
+                        </div>  
+                     </li>
+                     <li class="composition__item">
+                        <div class="composition__pic">
+                           <svg class="composition__img">
+                              <use xlink:href="./img/svg/sprite-burger.svg#cucumber"></use>
+                           </svg>
+                        </div>
+                        <div class="composition__item-cont">
+                           <span class="composition__name">Овощи</span>
+                           <span class="composition__weight">200г</span>
+                        </div>  
+                     </li>
+                     <li class="composition__item">
+                        <div class="composition__pic">
+                           <svg class="composition__img">
+                              <use xlink:href="./img/svg/sprite-burger.svg#cheese"></use>
+                           </svg>
+                        </div>
+                        <div class="composition__item-cont">
+                           <span class="composition__name">Сыр</span>
+                           <span class="composition__weight">80г</span>
+                        </div>  
+                     </li>
+                     <li class="close"></li>
+                  </ul>
                   <div class="burgers__pic">
                      <img src="./img/burgers/burger_1.png" class="burgers__img" alt="">
                   </div>
-                  <div class="burger__item-kkal">
+                  <div class="burger__button burger__button--kkal">
+                     <span class="burger__item-info">1200</span>
                      <svg class="kkal">
-                        <use xlink:href="./img/svg/sprite.svg#kkal"></use>
+                        <use xlink:href="./img/svg/sprite-burger.svg#kkal"></use>
                      </svg>
                      <h5 class="burger__item-title">ккал</h5>
                   </div>
@@ -164,12 +242,9 @@
                      </div>
                   </div>
                </div>
-            </div>
-            <a href="" class="burgers__scroll-right">
-               <svg class="burgers__scroll">
-                  <use xlink:href="./img/svg/sprite.svg#scroll-down-btn"></use>
-               </svg>
-            </a>
+            </li>
+            </ul>
+            
          </div>
       </section>
 
@@ -516,6 +591,37 @@
          </footer>
       </section>
 
+      <section class="section fullscreen">
+         <div class="container container__fullscreen">
+               <header class="fullscreen__header">
+                     <svg class="fullscreen__header-logo">
+                        <use xlink:href="./img/svg/sprite.svg#logo"></use>
+                     </svg>
+                     <div class="fullscreen__close"></div>
+               </header>
+               <ul class="fullscreen__list">
+                     <li class="fullscreen__item">
+                        <a href="" class="fullscreen__item-link">О нас</a>
+                     </li>
+                     <li class="fullscreen__item">
+                        <a href="" class="fullscreen__item-link">Бургеры</a>
+                     </li>
+                     <li class="fullscreen__item">
+                        <a href="" class="fullscreen__item-link">Команда</a>
+                     </li>
+                     <li class="fullscreen__item">
+                        <a href="" class="fullscreen__item-link">Меню</a>
+                     </li>
+                     <li class="fullscreen__item">
+                        <a href="" class="fullscreen__item-link">Отзывы</a>
+                     </li>
+                     <li class="fullscreen__item">
+                        <a href="" class="fullscreen__item-link">Контакты</a>
+                     </li>
+               </ul>
+         </div>
+      </section>
+
       <ul class="scroolls__menu">
          <li class="scrolls__item scrolls__item--active">
             <button type="button" class="scrolls__link"></button>
@@ -544,7 +650,16 @@
       
       </ul>
 
-   
+      <script>
+         let buttonBurger = document.querySelector('.button-burger');
+         let fullscreen = document.querySelector('.fullscreen');
+         let bodystyle = document.querySelector('.body');
+         buttonBurger.addEventListener('click', function() { fullscreen.style.right = '0' });
+         let fullscreenExit = document.querySelector('.fullscreen__close');
+         fullscreenExit.addEventListener('click', function() { fullscreen.style.right = '-100%' });
+         fullscreenExit.addEventListener('click', function() { document.getElementsByTagName("body")[0].style.overflow="auto"; });
+         buttonBurger.addEventListener('click', function() { document.getElementsByTagName("body")[0].style.overflow="hidden";});
+      </script>
    </div>
 </body>
 </html>
