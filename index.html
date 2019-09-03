@@ -657,8 +657,8 @@
          buttonBurger.addEventListener('click', function() { fullscreen.style.right = '0' });
          let fullscreenExit = document.querySelector('.fullscreen__close');
          fullscreenExit.addEventListener('click', function() { fullscreen.style.right = '-100%' });
-         fullscreenExit.addEventListener('click', function() { document.getElementsByTagName("body").style.overflow="auto"; });
-         buttonBurger.addEventListener('click', function() { document.getElementsByTagName("body").style.overflow="hidden";});
+         fullscreenExit.addEventListener('click', function() { document.getElementsByTagName("body")[0].style.overflow="auto"; });
+         buttonBurger.addEventListener('click', function() { document.getElementsByTagName("body")[0].style.overflow="hidden";});
       </script>
    </div>
 </body>
