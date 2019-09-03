@@ -24,14 +24,14 @@
    }
 
    @include phone-x {
-      top: -40px;
-      left: 90px;
+      top: rem(-40px);
+      left: rem(90px);
       min-width: 74%;
    }
 
    @include phone-se {
-      top: 0px;
-      left: 90px;
+      top: rem(0px);
+      left: rem(90px);
       min-width: 71%;
    }
 }
@@ -68,10 +68,10 @@
 .close{
    position: absolute;
    z-index: 1;
-   top: 4px;
+   top: rem(4px);
    right: 0;
-   width: 53px;
-   height: 55px;
+   width: rem(53px);
+   height: rem(55px);
    cursor: pointer;
    display: none;
 
@@ -84,11 +84,11 @@
 .close:after {
    content: "";
    position: absolute;
-   top: 21px;
-   left: 10px;
-   width: 26px;
-   height: 4px;
-   border-radius: 5px;
+   top: rem(21px);
+   left: rem(10px);
+   width: rem(26px);
+   height: rem(4px);
+   border-radius: rem(5px);
    background: #e35028;
 }
 

@@ -2,15 +2,7 @@
    display: flex;
    align-items: center;
    justify-content: space-between;
-   padding: 1% 2% 0;
-
-   @include phone-x{
-      padding: 2% 4% 0;
-   }
-
-   @include phone-se {
-      padding: 2% 4% 0;
-   }
+   padding: rem(12px) rem(10px) 0;
 }
 
 .header__buttons{
