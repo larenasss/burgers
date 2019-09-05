@@ -330,6 +330,7 @@
                         cupiditate tenetur pariatur magni dolorem quasi, libero beatae accusamus similique delectus 
                         minus id officia reprehenderit aspernatur a perferendis?
                      </p>
+                     <div class="close options__close"></div>
                   </div>
                </li>
                <li class="options__item">
@@ -344,6 +345,7 @@
                         cupiditate tenetur pariatur magni dolorem quasi, libero beatae accusamus similique delectus 
                         minus id officia reprehenderit aspernatur a perferendis?
                      </p>
+                     <div class="close options__close"></div>
                   </div>
                </li>
                <li class="options__item">
@@ -358,6 +360,7 @@
                         cupiditate tenetur pariatur magni dolorem quasi, libero beatae accusamus similique delectus 
                         minus id officia reprehenderit aspernatur a perferendis?
                      </p>
+                     <div class="close options__close"></div>
                   </div>
                </li>
                
@@ -597,7 +600,7 @@
                      <svg class="fullscreen__header-logo">
                         <use xlink:href="./img/svg/sprite.svg#logo"></use>
                      </svg>
-                     <div class="fullscreen__close"></div>
+                     <div class="close fullscreen__close"></div>
                </header>
                <ul class="fullscreen__list">
                      <li class="fullscreen__item">
@@ -659,6 +662,58 @@
          fullscreenExit.addEventListener('click', function() { fullscreen.style.right = '-100%' });
          fullscreenExit.addEventListener('click', function() { document.getElementsByTagName("body")[0].style.overflow="auto"; });
          buttonBurger.addEventListener('click', function() { document.getElementsByTagName("body")[0].style.overflow="hidden";});
+
+         ////////////////////////////////////////// Меню ( горизонтальный аккордеон)
+
+         let menu = document.querySelector('.options');
+         let optionsItem = document.querySelectorAll('.options__item');
+         let optionsItemLength = optionsItem.length;
+
+         menu.addEventListener('click', function(e) {
+            for (let i = 0; i < optionsItemLength; i++) {
+               optionsItem[i].classList.remove('options__item--active');
+            }
+         });
+
+         for (let i = 0; i < optionsItemLength; i++) {
+               optionsItem[i].addEventListener('click', function(e) {
+                  e.stopPropagation();
+                  e.preventDefault();
+
+                  if (optionsItem[i].classList.contains('options__item--active')) {
+                     optionsItem[i].classList.remove('options__item--active')
+                  } else { 
+                     for (let i=0; i < optionsItemLength; i++) { 
+                        optionsItem[i].classList.remove('options__item--active');
+                     }                     
+                     optionsItem[i].classList.add('options__item--active')
+                  }
+               })
+            }
+
+         //////////////////////////////////////// меню вертикальное 
+
+         let accordeonItem = document.querySelectorAll('.accordeon__item');
+         let accordeonItemLenght = accordeonItem.length;
+
+         for (let i = 0; i < accordeonItemLenght; i++) {
+            accordeonItem[i].addEventListener('click', function(e) {
+               e.stopPropagation();
+               e.preventDefault();
+
+               if (accordeonItem[i].classList.contains('accordeon__item--active')) {
+                  accordeonItem[i].classList.remove('accordeon__item--active')
+               } else {
+                  for (let i=0; i < accordeonItemLenght; i++) { 
+                     accordeonItem[i].classList.remove('accordeon__item--active');
+                  }
+                  accordeonItem[i].classList.add('accordeon__item--active')
+               }
+            })
+         }
+
+
+
       </script>
    </div>
 </body>

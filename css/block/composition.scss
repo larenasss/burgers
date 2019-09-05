@@ -65,39 +65,3 @@
    }
 }
 
-.close{
-   position: absolute;
-   z-index: 1;
-   top: rem(4px);
-   right: 0;
-   width: rem(53px);
-   height: rem(55px);
-   cursor: pointer;
-   display: none;
-
-   @include tablets {
-      display: block;
-   }
-}
-
-.close:before,
-.close:after {
-   content: "";
-   position: absolute;
-   top: rem(21px);
-   left: rem(10px);
-   width: rem(26px);
-   height: rem(4px);
-   border-radius: rem(5px);
-   background: #e35028;
-}
-
-.close:before {
-   webkit-transform: rotate(45deg);
-   transform: rotate(45deg);
-}
-
-.close:after {
-   webkit-transform: rotate(-45deg);
-   transform: rotate(-45deg);
-}
