@@ -54,18 +54,19 @@
    line-height: 0.89;
 
    @include tablets {
-      margin-bottom: rem(52px);
+      margin-bottom: rem(40px);
    }
 
    @include phone {
       margin-bottom: rem(15px);
-      font-size: rem(50px);
+      font-size: rem(45px);
       line-height: 1.14;
       padding: 0 6%;
    }
 
    @include phone-se {
-      font-size: rem(40px);
+      font-size: rem(36px);
+      margin-bottom: rem(5px);
    }
 }
 

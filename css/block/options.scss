@@ -28,6 +28,7 @@
    @include phone {
       z-index: 2;
       position: absolute;
+      height: 100%;
    }
    
    .options__item-title {
