@@ -12,32 +12,13 @@
    overflow: hidden;
 }
 
-.burgers__block {
-   display: flex;
-   position: relative;
-   width: 100%;
-
-   @include tablets {
-      max-width: 90%;
-      padding: 0 3%;
-   }
-
-   @include phone {
-      padding: 0 1%;
-   }
-
-   @include phone-se {
-      padding: 0 10%;
-   }
-}
-
-.burger__content-list {
+.burgers__block-menu {
    width: 100%;
    display: flex;
    overflow: hidden;
 }
 
-.burger__content-item {
+.burgers__block-item {
    display: flex;
    min-width: 100%;
    align-items: center;
@@ -47,8 +28,13 @@
       flex-direction: column;
       text-align: center;
       justify-content: center;
-      padding: 0;
-      max-width: 70%;
+      padding: 0 12%;
+      min-width: 100%;
+   }
+
+   @include phone {
+      padding: 0 9%;
+     
    }
 }
 
@@ -62,7 +48,7 @@
 
    @include tablets {
       height: 50%;
-      margin-bottom: rem(15px);
+      max-width: 85%;
    }
 
    @include phone {
@@ -71,16 +57,12 @@
 
    @include phone-x {
       height: 30%;
-      margin-bottom: 0;
+      margin-bottom: rem(20px);
    }
 }
 
 .burgers__img {
-   max-width: 100%;
-
-   @include tablets {
-      max-width: 80%;
-   }
+   max-width: 85%;
 }
 
 .burgers__content {
@@ -104,27 +86,29 @@
    height: rem(90px);
    border-radius: rem(5px);
    background-color: #f08c33;
-   left: rem(24px);
-   top: rem(-45px);
+   left: rem(58px);
+   top: rem(100px);
 
    @include tablets {
-      top: rem(-55px);
-      left: rem(68px);
+      left: rem(132px);
+      top: rem(30px);
    }
 
    @include phone {
-      top: rem(-40px);
-      left: 0;
+      width: rem(80px);
+      height: rem(80px);
+      left: rem(50px);
+      top: rem(50px);
    }
 
    @include phone-x {
-      top: rem(-30px);
-      left: 0;
+      top: rem(50px);
+      left: rem(30px);
    }
 
    @include phone-se {
-      top: 0;
-      left: 0;
+      left: rem(20px);
+      top: rem(30px);
    }
 
    &:hover {
@@ -141,20 +125,26 @@
 .burger{
    width: rem(46px);
    height: rem(56px);
+   
+   @include phone {
+      width: rem(40px);
+      height: rem(52px);
+   }
 }
 
 .burger__button--kkal {
    width: rem(90px);
    height: rem(90px);
    position: absolute;
-   left: rem(10px);
-   bottom: rem(-78px);
+   left: rem(42px);
+   bottom: rem(72px);
    opacity: 0.7;
+   
 
    @include tablets {
-      top: rem(-62px);
+      top: rem(22px);
       left: inherit;
-      right: rem(59px);
+      right: rem(132px);
    }
 
    @include phone {
@@ -166,6 +156,7 @@
    width: rem(60px);
    height: rem(60px);
    position: relative;
+   opacity: 0.7;
 }
 
 .burger__item-info {
@@ -188,14 +179,6 @@
 
 .burgers__text {
    margin-bottom: rem(20px);
-
-   @include tablets {
-      margin-bottom: rem(35px);
-   }
-
-   @include phone {
-      margin-bottom: rem(20px);
-   }
 
    @include phone-se {
       margin-bottom: rem(10px);

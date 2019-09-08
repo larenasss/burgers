@@ -3,36 +3,37 @@
    background: rgba(232, 233, 235, 0.9);
    border-radius: rem(5px);
    padding: rem(20px);
-   top: rem(-45px);
-   left: rem(115px);
+   top: rem(100px);
+   left: rem(148px);
    color: #2f3234;
    font-family: 'Ubuntu-Medium';
    font-weight: 500;
-   min-width: 28%;
+   min-width: 25%;
    opacity: 0;
 
    @include tablets {
-      top: rem(-55px);
-      left: rem(159px);
-      min-width: 52%;
+      left: rem(222px);
+      top: rem(30px);
+      min-width: 44%;
    }
 
    @include phone {
-      top: rem(-40px);
-      left: rem(90px);
-      min-width: 77%;
+      left: rem(130px);
+      top: rem(50px);
+      min-width: 60%;
    }
 
    @include phone-x {
-      top: rem(-30px);
-      left: rem(90px);
-      min-width: 74%;
+      top: rem(50px);
+      left: rem(110px);
+      min-width: 65%;
    }
 
    @include phone-se {
-      top: rem(0px);
-      left: rem(90px);
-      min-width: 71%;
+      top: rem(30px);
+      left: rem(100px);
+      min-width: 60%;
+      padding: rem(15px);
    }
 }
 
@@ -49,8 +50,12 @@
 .composition__pic {
    margin-right: rem(22px);
 
-   @include phone-se {
+   @include phone {
       margin-right: rem(10px);
+   }
+
+   @include phone-se {
+      margin-right: rem(5px);
    }
 }
 
@@ -69,7 +74,7 @@
    }
 
    @include phone {
-      width: 49%;
+      width: 55%;
    }
 
    @include phone-se {

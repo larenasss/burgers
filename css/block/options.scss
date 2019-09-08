@@ -36,7 +36,7 @@
    }
    
    .options__content {
-      width: 540px;
+      width: rem(540px);
       background-color: rgba($color: #2f3234, $alpha: 0.9);
       padding: rem(62px) rem(37px) rem(0px) rem(33px);
       text-align: start;
