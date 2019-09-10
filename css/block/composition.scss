@@ -3,37 +3,33 @@
    background: rgba(232, 233, 235, 0.9);
    border-radius: rem(5px);
    padding: rem(20px);
-   top: rem(100px);
-   left: rem(148px);
+   top: 0;
+   left: rem(90px);
    color: #2f3234;
    font-family: 'Ubuntu-Medium';
    font-weight: 500;
-   min-width: 25%;
+   min-width: 29%;
    opacity: 0;
 
    @include tablets {
-      left: rem(222px);
-      top: rem(30px);
+      left: rem(90px);
       min-width: 44%;
    }
 
    @include phone {
-      left: rem(130px);
-      top: rem(50px);
+      left: rem(80px);
       min-width: 60%;
    }
 
    @include phone-x {
-      top: rem(50px);
-      left: rem(110px);
-      min-width: 65%;
+      left: rem(80px);
+      min-width: 68%;
    }
 
    @include phone-se {
-      top: rem(30px);
-      left: rem(100px);
+      left: rem(80px);
       min-width: 60%;
-      padding: rem(15px);
+      min-width: 72%;
    }
 }
 
@@ -78,7 +74,7 @@
    }
 
    @include phone-se {
-      width: 52%;
+      width: 57%;
    }
 }
 

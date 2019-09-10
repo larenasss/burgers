@@ -78,3 +78,19 @@
    background: #ffffff;
    opacity: 0.7;
 }
+
+.popup__close, .form__close {
+   display: block;
+}
+
+.form__close {
+   width: rem(30px);
+   height: rem(30px);
+}
+
+.form__close:before,
+.form__close:after {
+   width: rem(20px);
+   top: 10px;
+   left: 6px;
+}

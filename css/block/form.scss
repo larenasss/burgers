@@ -1,6 +1,7 @@
 
 .form__content {
    display: flex;
+   padding: 0 1%;
 
    @include tablets {
       flex-direction: column;
@@ -16,6 +17,10 @@
 .form__column {
    flex: 1;
    margin-right: rem(20px);
+
+   &:nth-child(2) {
+      margin-right: 0;
+   }
 
    @include tablets {
       margin-right: 0;

@@ -16,6 +16,15 @@
    width: 100%;
    display: flex;
    overflow: hidden;
+   position: relative;
+
+   @include tablets {
+      width: 90%;
+   }
+
+   @include phone-se {
+      width: 85%;
+   }
 }
 
 .burgers__block-item {
@@ -23,17 +32,22 @@
    min-width: 100%;
    align-items: center;
    overflow: hidden;
+  
 
    @include tablets {
       flex-direction: column;
       text-align: center;
       justify-content: center;
       padding: 0 12%;
-      min-width: 100%;
    }
 
    @include phone {
-      padding: 0 9%;
+      padding: 0 5%;
+     
+   }
+
+   @include phone-se {
+      padding: 0 2%;
      
    }
 }
@@ -86,29 +100,12 @@
    height: rem(90px);
    border-radius: rem(5px);
    background-color: #f08c33;
-   left: rem(58px);
-   top: rem(100px);
-
-   @include tablets {
-      left: rem(132px);
-      top: rem(30px);
-   }
+   left: 0;
+   top: 0;
 
    @include phone {
       width: rem(80px);
       height: rem(80px);
-      left: rem(50px);
-      top: rem(50px);
-   }
-
-   @include phone-x {
-      top: rem(50px);
-      left: rem(30px);
-   }
-
-   @include phone-se {
-      left: rem(20px);
-      top: rem(30px);
    }
 
    &:hover {
@@ -136,15 +133,15 @@
    width: rem(90px);
    height: rem(90px);
    position: absolute;
-   left: rem(42px);
-   bottom: rem(72px);
+   left: 0;
+   bottom: 0;
    opacity: 0.7;
    
 
    @include tablets {
-      top: rem(22px);
       left: inherit;
-      right: rem(132px);
+      right: 0;
+      top: 0;
    }
 
    @include phone {

@@ -660,7 +660,7 @@
                <h1 class="title team__title">Команда</h1>  
                <ul class="accordeon">
                      <li class="accordeon__item">
-                        <a href="#" class="accordeon__item-title">Дэниэл редклиф</a>
+                        <a href="" class="accordeon__item-title">Дэниэл редклиф</a>
                         <div class="accordeon__item-content">
                            <div class="accordeon__item-pic">
                               <img src="./img/team/team-logo_1.jpg" alt="" class="accordeon__item-img">
@@ -674,7 +674,7 @@
                         </div>
                      </li>
                      <li class="accordeon__item">
-                        <a href="#" class="accordeon__item-title">Ричард Джеймс</a>
+                        <a href="" class="accordeon__item-title">Ричард Джеймс</a>
                         <div class="accordeon__item-content">
                            <div class="accordeon__item-pic">
                               <img src="./img/team/team-logo_1.jpg" alt="" class="accordeon__item-img">
@@ -688,7 +688,7 @@
                         </div>
                      </li>
                      <li class="accordeon__item">
-                        <a href="#" class="accordeon__item-title">Джейк Финн</a>
+                        <a href="" class="accordeon__item-title">Джейк Финн</a>
                         <div class="accordeon__item-content">
                            <div class="accordeon__item-pic">
                               <img src="./img/team/team-logo_1.jpg" alt="" class="accordeon__item-img">
@@ -702,7 +702,7 @@
                         </div>
                      </li>
                      <li class="accordeon__item">
-                        <a href="#" class="accordeon__item-title">Николай иванов</a>
+                        <a href="" class="accordeon__item-title">Николай иванов</a>
                         <div class="accordeon__item-content">
                            <div class="accordeon__item-pic">
                               <img src="./img/team/team-logo_1.jpg" alt="" class="accordeon__item-img">
@@ -864,57 +864,64 @@
                      <a href="" class="btn btn--reviews">Подробнее</a>
                   </div>
                </li>
-               
-               
             </ul>
+            <div class="overlay">
+                  <div class="popup">
+                     <h5 class="popup__title"></h5>
+                     <div class="popup__text">
+                     </div>
+                     <div class="close popup__close"></div>
+                  </div>
+                  
+               </div>
       </section>
 
       <section class="section delivery">
          <div class="container">
             <div class="title form__title  title--centered">Закажите доставку</div>
                <div class="form">
-                     <form action="" class="form__elem">
+                     <form class="form__elem">
                         <div class="form__content">
                            <div class="form__column">
                               <div class="form__row">
                                  <label for="" class="form__block">
                                     <div class="form__block-title">Имя</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" class="form__input" name="name" required>
                                  </label>
                                  <label for="" class="form__block">
                                     <div class="form__block-title">Телефон</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" class="form__input" name="phone" required>
                                  </label>
                               </div>
                               <div class="form__row">
                                  <label for="" class="form__block">
                                     <div class="form__block-title">Улица</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" class="form__input" name="street">
                                  </label>
                               </div>
                               <div class="form__row">
                                  <label for="" class="form__block">
                                     <div class="form__block-title">Дом</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" class="form__input" name="house">
                                  </label>
                                  <label for="" class="form__block">
                                     <div class="form__block-title">Корпус</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" class="form__input" name="housing">
                                  </label>
                                  <label for="" class="form__block">
                                     <div class="form__block-title">Квартира</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" class="form__input" name="apartment">
                                  </label>
                                  <label for="" class="form__block">
                                     <div class="form__block-title">Этаж</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" class="form__input" name="floor">
                                  </label>
                               </div>
                            </div>
                            <div class="form__column">
                                  <label for="" class="form__block form__block--last">
                                     <div class="form__block-title">Комментарий</div>
-                                    <textarea class="form__input form__input--textarea"></textarea>
+                                    <textarea class="form__input form__input--textarea" name="comment" required></textarea>
                                  </label>
                                  <div class="form__buttons">
                                  <div class="form__row form__row--radio-ckick">   
@@ -931,7 +938,7 @@
                                  </div>
                                  <div class="form__row">
                                     <label class="form__radio">
-                                          <input class="form__radio-input" name="" type="checkbox">
+                                          <input class="form__radio-input" name="notcall" type="checkbox">
                                           <span class="form__checkbox"></span>
                                           <div class="form__checkbox-text">Не перезванивать</div>
                                     </label>
@@ -942,6 +949,12 @@
                                  <button type="reset">Очистить</button>
                                  </div>
                         </div>
+                        <div class="overlay form__overlay">
+                              <div class="popup popup__form">
+                                 <div class="popup__text-form">
+                                 </div>
+                                 <div class="close form__close"></div>
+                              </div>
                         </div>
                      </form>
                </div>
@@ -1134,8 +1147,117 @@
          scrollLeft.addEventListener('click', function(e) { 
             e.preventDefault(), contentList.insertBefore(contentList.lastElementChild, contentList.firstElementChild) });
 
+         /////////////////////////////////////////////// модалки
 
+         let reviews = document.querySelector('.reviews');
+         let reviewsTitle = document.querySelector('.reviews__title');
+         let popupTitle = document.querySelector('.popup__title');
+         let reviewsText = document.querySelector('.reviews__text');
+         let overlay = document.querySelector('.overlay');
+         let popupText = document.querySelector('.popup__text');
+         let popupClose = document.querySelector('.popup__close');
 
+         reviews.addEventListener('click', function (e) {
+            e.preventDefault();
+            let elem = e.target;
+
+            if (elem.tagName === 'A') {
+               let modalText = reviewsText.innerHTML;
+               let modalTitle = reviewsTitle.innerHTML;
+
+               popupText.innerHTML = modalText;
+               popupTitle.innerHTML = modalTitle;
+               overlay.style.display = 'block';
+               document.getElementsByTagName("body")[0].style.overflow="hidden"; 
+            }
+
+            document.addEventListener('keyup', function (e) {
+               let keyName = e.key;
+               
+               if(keyName === 'Escape') {
+                  overlay.style.display = 'none';
+                  document.getElementsByTagName("body")[0].style.overflow="auto"; 
+               }
+            })
+         });
+
+         popupClose.addEventListener('click', function (e) {
+            overlay.style.display = 'none';
+            document.getElementsByTagName("body")[0].style.overflow="auto"; 
+         })
+
+         /////////////////////////////////////////// Форма
+
+         let myForm = document.querySelector('.form__elem');
+         let formButton = document.querySelector('.form__btn');
+         let formOverlay = document.querySelector('.form__overlay');
+         let formClose = document.querySelector('.form__close');
+         let formPopup = document.querySelector('.popup');
+         let popupTextForm = document.querySelector('.popup__text-form');
+
+         formButton.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            if (validateForm(myForm)) {
+               let data = new FormData;
+                  data.append("name", myForm.elements.name.value);
+                  data.append("phone", myForm.elements.phone.value);
+                  data.append("comment", myForm.elements.comment.value);
+                  data.append("to", "my@gmail.com");
+
+               const xhr = new XMLHttpRequest();
+               xhr.responseType = 'json';
+               xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+               xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+               xhr.send(data);
+               xhr.addEventListener('load', function () {
+                  if (xhr.response.status) {
+
+                     formOverlay.style.display = 'block';
+                     popupTextForm.innerHTML = "Сообщение отправленно";
+                } else {
+                     formOverlay.style.display = 'block';
+                     popupTextForm.innerHTML = "Отправить письмо не удалось, повторите запрос позже";
+                }
+               }); 
+            }
+         });
+
+         function validateForm(form) {
+            let valid = true;
+
+            if (!validateField(form.elements.name)) {
+               valid = false;
+            }
+
+            if (!validateField(form.elements.phone)) {
+               valid = false;
+            }
+
+            if (!validateField(form.elements.comment)) {
+               valid = false;
+            }
+
+            return valid;
+         }
+
+         function validateField(field) {
+              if (!field.checkValidity()) {
+               formOverlay.style.display = 'block';
+               popupTextForm.innerHTML = ['Заполните обязательные поля "Имя", "Телефон", "Комментарий"'];
+               document.getElementsByTagName("body")[0].style.overflow="hidden";
+
+               return false;
+              } else {
+               popupTextForm.innerHTML = '';
+               return true;
+              }
+         }
+
+         formClose.addEventListener('click', function (e) {
+            formOverlay.style.display = 'none';
+            document.getElementsByTagName("body")[0].style.overflow="auto";
+         })
 
       </script>
    </div>
