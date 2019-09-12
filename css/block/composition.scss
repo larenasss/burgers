@@ -3,36 +3,33 @@
    background: rgba(232, 233, 235, 0.9);
    border-radius: rem(5px);
    padding: rem(20px);
-   top: rem(-45px);
-   left: rem(115px);
+   top: 0;
+   left: rem(90px);
    color: #2f3234;
    font-family: 'Ubuntu-Medium';
    font-weight: 500;
-   min-width: 28%;
+   min-width: 29%;
    opacity: 0;
 
    @include tablets {
-      top: rem(-85px);
-      left: rem(212px);
-      min-width: 45%;
+      left: rem(90px);
+      min-width: 44%;
    }
 
    @include phone {
-      top: rem(-87px);
-      left: rem(90px);
-      min-width: 77%;
+      left: rem(80px);
+      min-width: 60%;
    }
 
    @include phone-x {
-      top: rem(-40px);
-      left: rem(90px);
-      min-width: 74%;
+      left: rem(80px);
+      min-width: 68%;
    }
 
    @include phone-se {
-      top: rem(0px);
-      left: rem(90px);
-      min-width: 71%;
+      left: rem(80px);
+      min-width: 60%;
+      min-width: 72%;
    }
 }
 
@@ -40,10 +37,22 @@
    display: flex;
    align-items: center;
    margin-bottom: rem(6px);
+
+  @include phone {
+   margin-bottom: rem(2px);
+  }
 }
 
 .composition__pic {
    margin-right: rem(22px);
+
+   @include phone {
+      margin-right: rem(10px);
+   }
+
+   @include phone-se {
+      margin-right: rem(5px);
+   }
 }
 
 .composition__img {
@@ -61,43 +70,11 @@
    }
 
    @include phone {
-      width: 49%;
+      width: 55%;
+   }
+
+   @include phone-se {
+      width: 57%;
    }
 }
 
-.close{
-   position: absolute;
-   z-index: 1;
-   top: rem(4px);
-   right: 0;
-   width: rem(53px);
-   height: rem(55px);
-   cursor: pointer;
-   display: none;
-
-   @include tablets {
-      display: block;
-   }
-}
-
-.close:before,
-.close:after {
-   content: "";
-   position: absolute;
-   top: rem(21px);
-   left: rem(10px);
-   width: rem(26px);
-   height: rem(4px);
-   border-radius: rem(5px);
-   background: #e35028;
-}
-
-.close:before {
-   webkit-transform: rotate(45deg);
-   transform: rotate(45deg);
-}
-
-.close:after {
-   webkit-transform: rotate(-45deg);
-   transform: rotate(-45deg);
-}

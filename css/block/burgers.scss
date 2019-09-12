@@ -9,45 +9,81 @@
    height: 100%;
    justify-content: center;
    align-items: center;
-  
+   overflow: hidden;
 }
 
-.burgers__block {
+.burgers__block-menu {
+   width: 100%;
    display: flex;
-   align-items: flex-end;
+   overflow: hidden;
    position: relative;
 
    @include tablets {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 0 10%;
-   }
-
-   @include phone {
-      padding: 0 2%;
+      width: 90%;
    }
 
    @include phone-se {
-      padding: 0 10%;
+      width: 85%;
+   }
+}
+
+.burgers__block-item {
+   display: flex;
+   min-width: 100%;
+   align-items: center;
+   overflow: hidden;
+  
+
+   @include tablets {
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      padding: 0 12%;
+   }
+
+   @include phone {
+      padding: 0 5%;
+     
+   }
+
+   @include phone-se {
+      padding: 0 2%;
+     
    }
 }
 
 .burgers__pic {
-   min-width: 70%;
+   min-width: 50%;
    max-height: 100%;
+   max-width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   @include tablets {
+      height: 50%;
+      max-width: 85%;
+   }
+
+   @include phone {
+      height: 40%;
+   }
+
+   @include phone-x {
+      height: 30%;
+      margin-bottom: rem(20px);
+   }
 }
 
 .burgers__img {
-   width: 100%;
-   height: 100%;
+   max-width: 85%;
 }
 
 .burgers__content {
-   width: 50%;
+   max-width: 50%;
 
    @include tablets {
-      width: 100%;
+      max-width: 100%;
    }
 }
 
@@ -58,33 +94,18 @@
    justify-content: center;
 }
 
-.burger__button--menu {
+.burger__button--block {
    position: absolute;
    width: rem(90px);
    height: rem(90px);
    border-radius: rem(5px);
    background-color: #f08c33;
-   left: rem(24px);
-   top: rem(-45px);
-
-   @include tablets {
-      top: rem(-85px);
-      left: rem(121px);
-   }
+   left: 0;
+   top: 0;
 
    @include phone {
-      top: rem(-87px);
-      left: 0;
-   }
-
-   @include phone-x {
-      top: rem(-40px);
-      left: 0;
-   }
-
-   @include phone-se {
-      top: 0;
-      left: 0;
+      width: rem(80px);
+      height: rem(80px);
    }
 
    &:hover {
@@ -101,20 +122,26 @@
 .burger{
    width: rem(46px);
    height: rem(56px);
+   
+   @include phone {
+      width: rem(40px);
+      height: rem(52px);
+   }
 }
 
 .burger__button--kkal {
    width: rem(90px);
    height: rem(90px);
    position: absolute;
-   left: rem(10px);
-   bottom: rem(-78px);
+   left: 0;
+   bottom: 0;
    opacity: 0.7;
+   
 
    @include tablets {
-      top: -90px;
       left: inherit;
-      right: 102px;
+      right: 0;
+      top: 0;
    }
 
    @include phone {
@@ -126,6 +153,7 @@
    width: rem(60px);
    height: rem(60px);
    position: relative;
+   opacity: 0.7;
 }
 
 .burger__item-info {
@@ -149,12 +177,8 @@
 .burgers__text {
    margin-bottom: rem(20px);
 
-   @include tablets {
-      margin-bottom: rem(35px);
-   }
-
-   @include phone {
-      margin-bottom: rem(20px);
+   @include phone-se {
+      margin-bottom: rem(10px);
    }
 
    & >p{
@@ -179,7 +203,7 @@
    margin-right: rem(5px);
 
    @include phone {
-      font-size: rem(50px);
+      font-size: rem(45px);
    }
 
    @include phone-se {
@@ -219,7 +243,7 @@
 
 .burgers__scroll {
    width: rem(29px);
-   height: rem(14px);
+   height: rem(16px);
 }
 
 .burgers__scroll-right {

@@ -6,41 +6,80 @@
 .options__accordeon{
    position: absolute;
    right: 0;
-   height: 100%;
+   top: 0;
+   bottom: 0;
+   width: 100%;
 }
 
 .options__menu{
+   position: relative;
    display: flex;
    height: 100%;
+   justify-content: flex-end;
 }
 
 .options__item {
    display: flex;
+   max-width: 100%;
 }
 
 .options__item--active {
+
+   @include phone {
+      z-index: 2;
+      position: absolute;
+      height: 100%;
+   }
    
    .options__item-title {
       color: $yellow;
    }
    
    .options__content {
-      min-width: rem(540px);
+      width: rem(540px);
       background-color: rgba($color: #2f3234, $alpha: 0.9);
       padding: rem(62px) rem(37px) rem(0px) rem(33px);
       text-align: start;
-   
+
       @include tablets {
-         display: none;
+         width: 100%;
+         padding: rem(62px) rem(37px) rem(0px) rem(33px);
+      }
+
+      @include phone {
+         width: 100%;
+         padding: rem(62px) rem(37px) rem(0px) rem(40px);
+      }
+
+      @include phone-se {
+         width: 100%;
+         padding: rem(62px) rem(20px) rem(0px) rem(20px);
+      }
+   }
+
+   .options__close {
+      @include phone {
+         display: block;
       }
    }
 
 }
 
+.options__content{
+   width: 0;
+   overflow: hidden;
+}
+
 .options__pic{
    display: flex;
+   box-sizing: content-box;
    justify-content: center;
-   max-width: rem(80px);
+   width: rem(80px);
+   padding: 0;
+
+   @include phone-se {
+      width: rem(50px);
+   }
 }
 
 .options__pic--meat{
@@ -55,23 +94,20 @@
    background: url('../img/options/menu-3.png')center center / cover no-repeat;
 }
 
-.options__item-title{
+.options__item-title >h2 {
+
    display: flex;
    align-content: center;
    writing-mode: vertical-lr;
    transform: rotate(180deg);
    font-family: $gagalin;
-   font-size: rem(24px);
+   font-size: rem(40px);
+   letter-spacing: 2.14;
    white-space: nowrap;
    height: 100%;
-   margin-top: rem(-50px);
+   padding: rem(25px) 0 0 0;
 
-   @include phone-se {
-      font-size: rem(20px);
+   @include phone {
+      font-size: rem(30px);
    }
-}
-
-.options__content{
-   width: 0;
-   overflow: hidden;
 }
