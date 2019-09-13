@@ -6,6 +6,8 @@ html {
  
 body {
   font-family: 'Ubuntu-Light', Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 100%;
   font-weight: 200;
   font-size: 14px;
   line-height: 1.42;
@@ -13,7 +15,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   color: white;
-  overflow: auto;
 
   @include phone-se {
     font-size: rem(12px);
@@ -52,12 +53,21 @@ button {
  
 .wrapper {
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   overflow: hidden;
+  
+}
+
+.maincontent {
+  width: 100%;
+  height: 100%;
+  transition: top 1s;
+  top: 0;
+  position: relative;
 }
 
 .container {
-  width: 100%;
+  width: calc(100% - 50px);
   max-width: 940px;
   margin: 0 auto;
   display: flex;

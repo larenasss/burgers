@@ -15,16 +15,8 @@
 .burgers__block-menu {
    width: 100%;
    display: flex;
-   overflow: hidden;
    position: relative;
-
-   @include tablets {
-      width: 90%;
-   }
-
-   @include phone-se {
-      width: 85%;
-   }
+   left: 0;
 }
 
 .burgers__block-item {
@@ -38,16 +30,27 @@
       flex-direction: column;
       text-align: center;
       justify-content: center;
-      padding: 0 12%;
+      padding: 0 14%;
    }
 
    @include phone {
-      padding: 0 5%;
+      padding: 0 4%;
      
    }
 
    @include phone-se {
       padding: 0 2%;
+     
+   }
+}
+
+.burgers__left {
+   display: flex;
+   position: relative;
+   justify-content: center;
+   height: 100%;
+
+   @include tablets {
      
    }
 }
@@ -61,17 +64,12 @@
    align-items: center;
 
    @include tablets {
-      height: 50%;
       max-width: 85%;
+      align-items: flex-end;
    }
 
-   @include phone {
-      height: 40%;
-   }
-
-   @include phone-x {
-      height: 30%;
-      margin-bottom: rem(20px);
+   @include phone-se {
+      max-width: 75%;
    }
 }
 
@@ -241,7 +239,7 @@
    transform: rotate(90deg);
 }
 
-.burgers__scroll {
+.burgers__scroll-pic {
    width: rem(29px);
    height: rem(16px);
 }

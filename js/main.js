@@ -58,8 +58,55 @@ for (let i = 0; i < accordeonItemLenght; i++) {
    })
 }
 
-////////////////////////////////////// слайдер бургеров
+////////////////////////////////////// слайдер бургеров (jQuery)
 
+let contentList = $('.burgers__block-menu');
+let contentItem = $('.burgers__block-item');
+let duration = 500;
+
+      var moveSlide = function (container, slideNum) {
+         let contenItemActive = $('.burgers__block-item--active');
+         let reqItem = contentItem.eq(slideNum);
+         let reqIndex = reqItem.index();
+         
+         if (reqItem.length) {
+            contentList.animate({'left' : -reqIndex * 100 + '%'
+            }, duration, function() {
+               contenItemActive.removeClass('burgers__block-item--active');
+               reqItem.addClass('burgers__block-item--active');
+            });
+         }
+      }
+
+      $('.burgers__scroll').on('click', function(e){
+         e.preventDefault();
+
+         var   $this = $(this), 
+               container = $this.closest('.container__burgers'),
+               items = $(contentItem, container),
+               contenItemActive = items.filter('.burgers__block-item--active'),
+               nextItem = contenItemActive.next(),
+               prevItem = contenItemActive.prev(),
+               existedItem, edgeItem, reqItem;
+
+         if   ($this.hasClass('burgers__scroll-right')) { // вперед
+               existedItem = contenItemActive.next();
+               edgeItem = items.first();
+         } 
+         
+         if   ($this.hasClass('burgers__scroll-left')) {
+               existedItem = contenItemActive.prev();
+               edgeItem = items.last();
+
+         }
+
+         reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
+         
+
+         moveSlide(container, reqItem);
+      });
+
+/* Слайдер на ваниле
 let scrollLeft = document.querySelector('.burgers__scroll-left');
 let scrollRight = document.querySelector('.burgers__scroll-right');
 let contentList = document.querySelector('.burgers__block-menu');
@@ -71,6 +118,53 @@ scrollRight.addEventListener('click', function(e) {
 
 scrollLeft.addEventListener('click', function(e) { 
    e.preventDefault(), contentList.insertBefore(contentList.lastElementChild, contentList.firstElementChild) });
+   */
+
+/////////////////////////////////////////////// Скролл
+
+
+$(document).ready(function(){
+
+   let screen = 0;
+   let container = $('.maincontent');
+   let pages = $('.section');
+   let inscroll = false;
+
+   $('.section:first-child').addClass('active');
+
+   $('body').on('mousewheel', function(e){
+
+      let activePage = pages.filter('.active')
+
+      if (!inscroll) {
+         inscroll = true;
+
+         if (e.deltaY > 0) {
+
+            if (activePage.prev().length) {
+               screen--;
+            }
+         } else {
+
+            if (activePage.next().length) {
+               screen++;
+            }
+
+         }
+   }
+   
+      let position = (-screen * 100) + '%';
+      console.log(position);
+      
+
+      pages.eq(screen).addClass('active').siblings().removeClass('active');
+      container.css('top', position);
+
+      setTimeout(function(){
+         inscroll = false;
+      },1300);
+   });
+});
 
 /////////////////////////////////////////////// модалки
 
