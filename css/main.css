@@ -359,7 +359,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
-  color: white; }
+  color: white;
+  -ms-touch-action: none;
+  touch-action: none; }
   @media screen and (max-width: 320px) {
     body {
       font-size: 0.85714rem; } }
@@ -397,14 +399,15 @@ button {
 .maincontent {
   width: 100%;
   height: 100%;
-  -webkit-transition: top 1s;
-  -o-transition: top 1s;
-  transition: top 1s;
-  top: 0;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
   position: relative; }
 
 .container {
-  width: calc(100% - 50px);
+  width: 100%;
   max-width: 940px;
   margin: 0 auto;
   display: -webkit-box;
@@ -1088,7 +1091,8 @@ section {
   width: 100%;
   max-width: 75rem;
   top: 50%;
-  position: absolute; }
+  position: absolute;
+  z-index: 2; }
 
 .burgers__scroll-left {
   -webkit-transform: rotate(90deg);
@@ -1935,12 +1939,12 @@ section {
   position: fixed;
   top: 6.78571rem;
   right: 3.78571rem;
-  z-index: z-fixed-menu; }
+  z-index: 3; }
   @media screen and (max-width: 768px) {
     .scroolls__menu {
       display: none; } }
 
-.scrolls__item--active .scrolls__link {
+.scrolls__item.active .scrolls__link {
   border-color: #fff; }
 
 .scrolls__item:hover .scrolls__link {

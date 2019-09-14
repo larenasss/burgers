@@ -3,7 +3,7 @@
    position: fixed;
    top: rem(95px);
    right: rem(53px);
-   z-index: z-fixed-menu;
+   z-index: 3;
 
    @include tablets {
       display: none;
@@ -11,7 +11,7 @@
 }
 
 .scrolls__item {
-   &--active {
+   &.active {
       .scrolls__link {
          border-color: #fff;
       }

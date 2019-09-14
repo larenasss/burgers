@@ -122,7 +122,7 @@ scrollLeft.addEventListener('click', function(e) {
 
 /////////////////////////////////////////////// Скролл
 
-
+/* Скролл 1 вариант не доделанный
 $(document).ready(function(){
 
    let screen = 0;
@@ -165,6 +165,130 @@ $(document).ready(function(){
       },1300);
    });
 });
+
+*/
+const sections = $('.section');
+const display = $('.maincontent');
+let inscroll = false;
+
+const md = new MobileDetect(window.navigator.userAgent);
+const isMobile = md.mobile();
+
+const countPosition = sectionsEq => {
+   return `${sectionsEq * -100}%`;
+}
+
+const switchActiveClass = (elems, elemEq) => {
+   elems
+      .eq(elemEq)
+      .addClass('active')
+      .siblings()
+      .removeClass('active')
+}
+
+const unBlockScroll = () => {
+   const transitionDuration = 1000;
+
+   const touchScrollInertionTime = 300;
+   setTimeout(() => {
+      inscroll = false
+   }, transitionDuration + touchScrollInertionTime);
+}
+
+const performTransition = sectionEq => {
+   if (inscroll) return;
+
+      inscroll = true;
+      const position = countPosition(sectionEq);
+      const switchFixedfMenuActiveClass = () => 
+         switchActiveClass($('.scrolls__item'), sectionEq);
+      
+      switchFixedfMenuActiveClass();
+
+      switchActiveClass(sections, sectionEq);
+   
+      display.css({
+         transform: `translateY(${position})`
+      });
+
+      unBlockScroll();
+}
+
+const scrollViewport = directions => {
+   const activeSection = sections.filter('.active');
+   const nextSection = activeSection.next();
+   const prevSection = activeSection.prev();
+
+   if(directions === 'next' && nextSection.length) {
+      performTransition(nextSection.index());
+   }
+
+   if (directions === 'prev' && prevSection.length) {
+      performTransition(prevSection.index());
+   }
+
+}
+
+
+
+$(document).on('wheel', function(e) {
+   let deltaY = e.originalEvent.deltaY;
+
+   if (deltaY < 0) {
+      scrollViewport('prev');
+   }
+
+   if (deltaY > 0) {
+      scrollViewport('next');
+   }
+});
+
+$(document).on('keydown', e => {
+   const tagName = e.target.tagName.toLowerCase();
+   const userTypingInInputs = tagName === 'input' || tagName === 'textarea';
+
+   if (userTypingInInputs) return;
+      
+   switch(e.keyCode) {
+      case 38:
+         scrollViewport('prev');
+         break;
+      case 40:
+         scrollViewport('next');
+         break;
+   }
+});
+
+$('[data-scroll-to]').on('click', e => {
+   e.preventDefault();
+
+   const target = parseInt($(e.currentTarget).attr('data-scroll-to'));
+
+   performTransition(target);
+});
+
+if (isMobile) {
+   window.addEventListener(
+      'touchmove',
+       e => {
+         e.preventDefault();
+      },
+      { passive: false}
+   );
+   
+   $('body').swipe({
+   
+      swipe: function(event, direction) {
+         let scrollDirection;
+   
+         if (direction === 'up') scrollDirection = 'next';
+         if (direction === 'down') scrollDirection = 'prev';
+   
+         scrollViewport(scrollDirection);
+      }
+   });
+}
+
 
 /////////////////////////////////////////////// модалки
 
