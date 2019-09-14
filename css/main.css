@@ -433,7 +433,8 @@ section {
   flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  position: relative; }
   @media screen and (max-width: 320px) {
     section {
       min-height: inherit; } }
@@ -856,13 +857,10 @@ section {
   color: rgba(47, 50, 52, 0.8); }
 
 .burgers {
-  height: 100vh;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f9b43b), color-stop(#eb8c38), to(#f9b43b));
   background-image: -webkit-linear-gradient(#f9b43b, #eb8c38, #f9b43b);
   background-image: -o-linear-gradient(#f9b43b, #eb8c38, #f9b43b);
-  background-image: linear-gradient(#f9b43b, #eb8c38, #f9b43b);
-  position: relative;
-  overflow: auto; }
+  background-image: linear-gradient(#f9b43b, #eb8c38, #f9b43b); }
 
 .container__burgers {
   height: 100%;
@@ -1339,9 +1337,7 @@ section {
       width: 98%; } }
 
 .team {
-  background: url("../img/team/team-bg.jpg") center center/cover no-repeat;
-  position: relative;
-  overflow: auto; }
+  background: url("../img/team/team-bg.jpg") center center/cover no-repeat; }
 
 .team__block {
   position: absolute;
