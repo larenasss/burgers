@@ -1341,8 +1341,7 @@ section {
 .team {
   background: url("../img/team/team-bg.jpg") center center/cover no-repeat;
   position: relative;
-  overflow: auto;
-  height: 100vh; }
+  overflow: auto; }
 
 .team__block {
   position: absolute;
