@@ -1563,7 +1563,7 @@ section {
   justify-content: center;
   width: 5.71429rem;
   padding: 0; }
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 375px) {
     .options__pic {
       width: 3.57143rem; } }
 

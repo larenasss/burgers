@@ -77,7 +77,7 @@
    width: rem(80px);
    padding: 0;
 
-   @include phone-se {
+   @include phone-x {
       width: rem(50px);
    }
 }
