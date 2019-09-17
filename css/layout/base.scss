@@ -75,5 +75,6 @@ button {
 
   @include tablets {
     max-width: initial;
+    width: 95%;
   }
 }

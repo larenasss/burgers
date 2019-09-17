@@ -1,20 +1,21 @@
 .video {
    background: url('../img/player/player-bg.jpg')center center / cover no-repeat;
    display: flex;
-   align-items: center;
+}
+
+.container__video {
+  align-items: center;
+}
+
+#player {
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .player {
    position: relative;
    display: inline-block;
-}
-
-.player__triangle {
-  width: 120px;
-  height: 120px;
-  position: absolute;
-  top: 35%;
-  left: 42%;
+  
 }
 
 .player__wrapper {
@@ -30,7 +31,7 @@
    left: 0;
    right: 0;
    bottom: 0;
-   background: url("../img/player/screen-bg.jpg") center center / cover no-repeat;
+   background: url("../img/player/screen-bg.png") center center / cover no-repeat;
    cursor: pointer;
  }
 
@@ -39,20 +40,20 @@
    bottom: 0;
    left: 0;
    right: 0;
-   height: 35px;
+   height: rem(35px);
    background: #3e3e3e;
    display: flex;
    align-items: center;
    justify-content: space-between;
-   padding: 0 25px;
+   padding: 0 rem(25px);
  }
 
  .player__start {
-   width: 16px;
-   height: 22px;
-   border: 11px solid transparent;
+   width: rem(16px);
+   height: rem(22px);
+   border: rem(10px) solid transparent;
    border-left-color: #626262;
-   border-left-width: 15px;
+   border-left-width: rem(15px);
    padding: 0;
    border-right-width: 0;
    background: transparent;
@@ -60,15 +61,15 @@
    position: relative;
    
    &.paused {
-     width: 14px;
-     height: 22px;
+     width: rem(14px);
+     height: rem(18px);
      border: none;
      &:after,
      &:before {
        content: "";
        display: block;
        position: absolute;
-       width: 5px;
+       width: rem(5px);
        top: 0;
        bottom: 0;
        background: #626262;
@@ -83,14 +84,22 @@
  }
 
  .player__playback {
-   height: 16px;
-   width: 446px;
+   height: rem(16px);
+   width: 72%;
    position: relative;
    cursor: pointer;
+
+   @include phone {
+     width: 65%;
+   }
+
+   @include phone-x {
+     width: 55%;
+   }
  
    &:before {
      content: "";
-     height: 4px;
+     height: rem(4px);
      position: absolute;
      top: 50%;
      left: 0;
@@ -103,10 +112,10 @@
  
  .player__playback-button {
    background: #626262;
-   border-radius: 50px;
+   border-radius: rem(50px);
    border: none;
-   width: 12px;
-   height: 12px;
+   width: rem(12px);
+   height: rem(12px);
    padding: 0;
    position: absolute;
    top: 50%;
@@ -115,11 +124,11 @@
  }
 
  .player__volume {
-   width: 16px;
-   height: 22px;
-   border: 11px solid transparent;
+   width: rem(16px);
+   height: rem(22px);
+   border: rem(11px) solid transparent;
    border-right-color: #626262;
-   border-right-width: 15px;
+   border-right-width: rem(15px);
    padding: 0;
    border-left-width: 0;
    background: transparent;
@@ -130,15 +139,15 @@
    &::before {
     content: "";
     background: #626262;
-    border-radius: 50px;
+    border-radius: rem(50px);
     border: none;
-    width: 8px;
-    height: 8px;
+    width: rem(8px);
+    height: rem(8px);
     padding: 0;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    left: 4px;
+    left: rem(4px);
    }
 
    &.active {
@@ -146,13 +155,13 @@
     content: "";
     background: #626262;
     border: none;
-    width: 25px;
-    height: 4px;
+    width: rem(25px);
+    height: rem(4px);
     padding: 0;
     position: absolute;
-    top: -2px;
+    top: rem(-2px);
     transform: translate(-50%, -50%);
-    left: -1px;
+    left: rem(-1px);
     transform: rotate(-140deg);
     }
   }
@@ -160,14 +169,18 @@
 
 
  .player__duration {
-   height: 16px;
-   width: 75px;
+   height: rem(16px);
+   width: 15%;
    position: relative;
    cursor: pointer;
 
+   @include phone-x {
+    width: 25%;
+   }
+
    &:before {
       content: "";
-      height: 4px;
+      height: rem(4px);
       position: absolute;
       top: 50%;
       left: 0;
@@ -180,13 +193,13 @@
 
  .player__duration-button {
    background: #626262;
-   border-radius: 50px;
+   border-radius: rem(50px);
    border: none;
-   width: 12px;
-   height: 12px;
+   width: rem(12px);
+   height: rem(12px);
    padding: 0;
    position: absolute;
    top: 50%;
    transform: translate(-50%, -50%);
-   right: -12px;
+   right: rem(-12px);
  }

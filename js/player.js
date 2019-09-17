@@ -124,6 +124,20 @@ let   vedeoImg = document.querySelector('.player__wrapper')
          }
       });
 
+      // Плей стоп на враперре
+
+      vedeoImg.addEventListener('click', function () {
+         if (vedeoEl.paused) {
+            vedeoEl.play();
+            vedeoImg.classList.add('active');
+            playBtn.classList.add('paused');
+         } else {
+            vedeoEl.pause();
+            vedeoImg.classList.remove('active');
+            playBtn.classList.remove('paused');
+         }
+      });
+
       //Переключение ползунка
       videoControl.addEventListener('click', e => {
          const position = e.offsetX / videoControl.offsetWidth;
@@ -155,10 +169,20 @@ let   vedeoImg = document.querySelector('.player__wrapper')
       volumeControl.addEventListener('click', function(e) {
          let barWidth = volumeControl.offsetWidth;
          let clickPosition = e.offsetX;
+
          positionVolumeButton.style.left = (100 * clickPosition / barWidth) + '%';
          currentVolume = clickPosition / barWidth;
          vedeoEl.volume = currentVolume;
-       })
+
+         if( positionVolumeButton.style.left == 0 + '%') {
+            muteBtn.classList.add('active');
+         } else {
+            muteBtn.classList.remove('active');
+         }
+       });
+      
+
+
 
 
 
