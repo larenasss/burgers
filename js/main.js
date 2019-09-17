@@ -433,4 +433,66 @@ formClose.addEventListener('click', function (e) {
 });
 
 
+//// Карты
+
+ymaps.ready(init);
+
+var placemarks = [
+   {
+      latitude: 59.89,
+      longitude: 30.42,
+      hintContent: '<di{v class="map__hint">ул. Бабушкина, д. 12</div>',
+      balloonContent: [
+         '<div class="map__ballon">',
+         'Самыe вкусные бургеры у нас! Заходите по адресу: ул. Литераторов, д.19',
+         '</div>'
+      ]
+   },
+
+   {
+      latitude: 59.88,
+      longitude: 30.32,
+      hintContent: '<di{v class="map__hint">ул. Заставская, д. 21к1</div>',
+      balloonContent: [
+         '<div class="map__ballon">',
+         'Самыe вкусные бургеры у нас! Заходите по адресу: ул. Литераторов, д.19',
+         '</div>'
+      ]
+   },
+
+   {
+      latitude: 59.90,
+      longitude: 30.32,
+      hintContent: '<di{v class="map__hint">ул. Киевская 6, д. 19</div>',
+      balloonContent: [
+         '<div class="map__ballon">',
+         'Самыe вкусные бургеры у нас! Заходите по адресу: ул. Литераторов, д.19',
+         '</div>'
+      ]
+   }
+];
+
+function init() {
+   var map = new ymaps.Map('map', {
+      center: [59.92, 30.31],
+      zoom: 12,
+      controls: ['zoomControl'],
+      behaviors: ['drag']
+   });
+
+   placemarks.forEach(function(obj) {
+      var placemark = new ymaps.Placemark([obj.latitude, obj.longitude], {
+         hintContent: obj.hintContent,
+         balloonContent: obj.balloonContent.join('')
+      },
+      {
+         iconLayout: 'default#image',
+         iconImageHref: './img/map/map-marker.svg',
+         iconImageSize: [46, 57],
+         iconImageOffset: [-23, -57],
+      });
+      map.geoObjects.add(placemark);
+   });
+}
+
    

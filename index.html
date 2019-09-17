@@ -10,6 +10,7 @@
 <body>
    <div class="wrapper">
       <div class="maincontent">
+           
          <section class="section section--no--centered  welcome active">
             <div class="container welcome__container">
                <header class="header">
@@ -59,7 +60,7 @@
                         <h2 class="welcome__subtitle">натуральные бургеры</h2>
                      </div>
                   </div>
-            <a href="" class="scroll-down-link">
+            <a href="" class="scroll-down-link" data-scroll-to="1">
                <svg class="scroll-down-btn">
                   <use xlink:href="./img/svg/sprite.svg#scroll-down-btn"></use>
                </svg>
@@ -886,6 +887,30 @@
                   </div>
          </section>
 
+         <section class="section video">
+               <h1 class="title title--black">Как мы работаем</h1>
+               <div class="player">
+                  <div class="player__wrapper">
+                     <video id="player" width="660" height="405" poster="./img/player/screen-bg.png" >
+                        <source src="./img/player/Rick Astley - Never Gonna Give You Up (Video).mp4" type = video/mp4>
+                     </video>
+
+                  </div>
+                  <div class="player__controls">
+                     <button class="player__start"></button>
+                     <div class="player__playback">
+                        <button class="player__playback-button"></button>
+                     </div>
+                     <div class="player__volume">
+                        <button class="player__volume-button"></button>
+                     </div>
+                     <div class="player__duration">
+                        <button class="player__duration-button"></button>
+                     </div>
+                  </div>
+               </div>
+         </section>
+
          <section class="section delivery">
             <div class="container">
                <div class="title form__title  title--centered">Закажите доставку</div>
@@ -973,14 +998,15 @@
                   </div>
             </div>
          </section>
-         
+
          <section class="section contacts">
+            <div style="width: 100%; height: 100%" id="map" class="map"></div>
             <footer class="footer">
                <div class="container">
                   <div class="footer__content">
                   <div class="footer__left">
                      <div class="footer__text">
-                     <p>Санкт-Петербург, ул.Бабушкина, д.12/1, 15
+                     <p>Санкт-Петербург, ул.Бабушкина, д.12
                      </p>
                      </div>
                      <div class="footer__contacts">
@@ -1025,38 +1051,38 @@
                </div>
             </footer>
          </section>
-
-         <section class="section fullscreen">
-            <div class="container container__fullscreen">
-                  <header class="fullscreen__header">
-                        <svg class="fullscreen__header-logo">
-                           <use xlink:href="./img/svg/sprite.svg#logo"></use>
-                        </svg>
-                        <div class="close fullscreen__close"></div>
-                  </header>
-                  <ul class="fullscreen__list">
-                        <li class="fullscreen__item">
-                           <a href="" class="fullscreen__item-link" data-scroll-to="1">О нас</a>
-                        </li>
-                        <li class="fullscreen__item">
-                           <a href="" class="fullscreen__item-link" data-scroll-to="2">Бургеры</a>
-                        </li>
-                        <li class="fullscreen__item">
-                           <a href="" class="fullscreen__item-link" data-scroll-to="3">Команда</a>
-                        </li>
-                        <li class="fullscreen__item">
-                           <a href="" class="fullscreen__item-link" data-scroll-to="4">Меню</a>
-                        </li>
-                        <li class="fullscreen__item">
-                           <a href="" class="fullscreen__item-link" data-scroll-to="5">Отзывы</a>
-                        </li>
-                        <li class="fullscreen__item">
-                           <a href="" class="fullscreen__item-link" data-scroll-to="7">Контакты</a>
-                        </li>
-                  </ul>
-            </div>
-         </section>
+         
       </div>
+      <section class="section fullscreen">
+         <div class="container container__fullscreen">
+               <header class="fullscreen__header">
+                     <svg class="fullscreen__header-logo">
+                        <use xlink:href="./img/svg/sprite.svg#logo"></use>
+                     </svg>
+                     <div class="close fullscreen__close"></div>
+               </header>
+               <ul class="fullscreen__list">
+                     <li class="fullscreen__item">
+                        <a href="" class="fullscreen__item-link" data-scroll-to="1">О нас</a>
+                     </li>
+                     <li class="fullscreen__item">
+                        <a href="" class="fullscreen__item-link" data-scroll-to="2">Бургеры</a>
+                     </li>
+                     <li class="fullscreen__item">
+                        <a href="" class="fullscreen__item-link" data-scroll-to="3">Команда</a>
+                     </li>
+                     <li class="fullscreen__item">
+                        <a href="" class="fullscreen__item-link" data-scroll-to="4">Меню</a>
+                     </li>
+                     <li class="fullscreen__item">
+                        <a href="" class="fullscreen__item-link" data-scroll-to="5">Отзывы</a>
+                     </li>
+                     <li class="fullscreen__item">
+                        <a href="" class="fullscreen__item-link" data-scroll-to="7">Контакты</a>
+                     </li>
+               </ul>
+         </div>
+      </section>
       <ul class="scroolls__menu">
          <li class="scrolls__item active">
             <button type="button" class="scrolls__link" data-scroll-to="0"></button>
@@ -1082,10 +1108,16 @@
          <li class="scrolls__item">
             <button type="button" class="scrolls__link" data-scroll-to="7"></button>
          </li>
+         <li class="scrolls__item">
+            <button type="button" class="scrolls__link" data-scroll-to="8"></button>
+         </li>
       </ul>
    </div>
+   <script src="https://api-maps.yandex.ru/2.1/?apikey=aefec6c2-bda9-47a1-a739-6dcd09067d6d&lang=ru_RU" type="text/javascript"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    <script src="./js/mobile-detected.js"></script>
+   <script src="./js/player.js"></script>
+   
    <script src="./js/jquery.touchSwipe.min.js"></script>
    <script src="./js/main.js"></script>
 </body>
