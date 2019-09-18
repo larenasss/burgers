@@ -65,6 +65,7 @@ task('styles', () => {
 
 const libs = [
    'node_modules/jquery/dist/jquery.js',
+   'node_modules/jquery-touchswipe/jquery.touchSwipe.js',
    'node_modules/mobile-detect/mobile-detect.js',
    'dev/js/*.js'
 ]
@@ -108,6 +109,6 @@ task(
 
 task(
    'build', 
-   series('clean', parallel('copy:html','copy:fonts','copy:img','copy:biblio', 'styles', 'scripts'))
+   series('clean', parallel('copy:html','copy:fonts','copy:img','copy:biblio', 'styles', 'scripts','server'))
 );
 

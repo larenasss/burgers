@@ -267,6 +267,7 @@ $('[data-scroll-to]').on('click', e => {
    performTransition(target);
 });
 
+
 if (isMobile) {
    window.addEventListener(
       'touchmove',
@@ -276,9 +277,10 @@ if (isMobile) {
       { passive: false}
    );
    
+   
    $('body').swipe({
    
-      swipe: function(event, direction) {
+      swipe: (event, direction) => {
          let scrollDirection;
    
          if (direction === 'up') scrollDirection = 'next';
