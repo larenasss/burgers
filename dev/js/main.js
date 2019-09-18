@@ -276,9 +276,9 @@ if (isMobile) {
       { passive: false}
    );
    
-   $('wrapper').swipe({
+   $('body').swipe({
    
-      swipe: (event, direction) => {
+      swipe: function(event, direction) {
          let scrollDirection;
    
          if (direction === 'up') scrollDirection = 'next';

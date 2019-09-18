@@ -65,7 +65,8 @@ task('styles', () => {
 
 const libs = [
    'node_modules/jquery/dist/jquery.js',
-   'dev/js/*.js',
+   'node_modules/mobile-detect/mobile-detect.js',
+   'dev/js/*.js'
 ]
 
 task('scripts', () => {
