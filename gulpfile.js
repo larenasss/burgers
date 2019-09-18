@@ -38,6 +38,12 @@ task('copy:img', () => {
       .pipe(reload({ stream: true }));
 });
 
+task('copy:biblio', () => {
+   return src('dev/biblio/**')
+      .pipe(dest('prod/biblio'))
+      .pipe(reload({ stream: true }));
+});
+
 const styles = [
    'node_modules/normalize.css/normalize.css',
    'dev/css/main.scss'
@@ -59,15 +65,12 @@ task('styles', () => {
 
 const libs = [
    'node_modules/jquery/dist/jquery.js',
-   'dev/js/mobile-detected.js',
-   'dev/js/*.js'
+   'dev/js/*.js',
 ]
 
 task('scripts', () => {
    return src(libs)
-      .pipe(gulpif(env === 'prod', concat('main.min.js', {newLine: ";"})
-         )
-      )
+      .pipe(concat('main.min.js', {newLine: ";"}))
       .pipe(babel({
          presets: ['@babel/env']
           })
@@ -84,7 +87,6 @@ task('server', () => {
        server: {
            baseDir: "./prod"
        },
-       open: false
    });
 });
 
@@ -98,13 +100,13 @@ task(
    'default', 
    series(
    'clean',
-   parallel('copy:html','copy:fonts','copy:img', 'styles', 'scripts'), 
+   parallel('copy:html','copy:fonts','copy:img','copy:biblio',  'styles', 'scripts'), 
    parallel('watch', 'server'),
    )
 );
 
 task(
    'build', 
-   series('clean', parallel('copy:html','copy:fonts','copy:img', 'styles', 'scripts'))
+   series('clean', parallel('copy:html','copy:fonts','copy:img','copy:biblio', 'styles', 'scripts'))
 );
 
