@@ -1,0 +1,81 @@
+.composition {
+   position: absolute;
+   background: rgba(232, 233, 235, 0.9);
+   border-radius: rem(5px);
+   padding: rem(20px);
+   top: 0;
+   left: rem(90px);
+   color: #2f3234;
+   font-family: 'Ubuntu-Medium';
+   font-weight: 500;
+   min-width: 29%;
+   width: 60%;
+   opacity: 0;
+
+   @include tablets {
+      left: rem(90px);
+      min-width: 44%;
+   }
+
+   @include phone {
+      left: rem(80px);
+      min-width: 60%;
+   }
+
+   @include phone-x {
+      left: rem(80px);
+      min-width: 68%;
+   }
+
+   @include phone-se {
+      left: rem(80px);
+      min-width: 60%;
+      min-width: 72%;
+   }
+}
+
+.composition__item {
+   display: flex;
+   align-items: center;
+   margin-bottom: rem(6px);
+
+  @include phone {
+   margin-bottom: rem(2px);
+  }
+}
+
+.composition__pic {
+   margin-right: rem(22px);
+
+   @include phone {
+      margin-right: rem(10px);
+   }
+
+   @include phone-se {
+      margin-right: rem(5px);
+   }
+}
+
+.composition__img {
+   width: rem(44px);
+   height: rem(39px);
+}
+
+.composition__item-cont {
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+
+   @include tablets {
+      width: 58%;
+   }
+
+   @include phone {
+      width: 55%;
+   }
+
+   @include phone-se {
+      width: 57%;
+   }
+}
+

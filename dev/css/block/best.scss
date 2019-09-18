@@ -1,0 +1,106 @@
+.best{
+   background: url('../img/tho__section/bg.jpg') center center /cover no-repeat;
+   color: $black;
+}
+
+.best__list{
+   display: flex;
+
+   @include phone {
+      flex-direction: column;
+      padding: 0 2%;
+   }
+}
+
+.best__item{
+   display: flex;
+   flex: 1;
+   flex-direction: column;
+   margin-right: rem(16px);
+   text-align: center;
+
+      @include phone {
+         flex-direction: row;
+         margin-right: 0;
+         margin-bottom: rem(30px);
+         text-align: left;
+   
+      @include phone-se{
+         margin-bottom: rem(5px);
+      }
+
+      &:last-child {
+         margin-bottom: 0;
+      }
+   }
+   
+   &:last-child{
+      margin-right: 0;
+
+      .best__item-title{
+         margin-bottom: rem(10px);
+      }
+   }
+}
+
+
+.best__picture{
+   margin-bottom: rem(26px);
+
+   @include phone {
+      margin-right: rem(26px);
+      display: flex;
+      align-items: center;
+   }
+   
+   &:last-child {
+      margin-bottom: 0;
+   }
+}
+
+.best__icon {
+   width: rem(97px);
+   height: rem(90px);
+
+   @include phone-se {
+      height: rem(80px);
+   }
+
+   &--meat {
+      fill: $red;
+   }
+
+   &--hand {
+      fill: $yellow;
+   }
+
+   &--natural {
+      fill: $green;
+   }
+}
+
+.best__item-title{
+   margin-bottom: rem(14px);
+
+   @include phone-se{
+      margin-bottom: 0;
+   }
+
+   >h4{
+   font-family: $lifehack;
+   font-weight: 500;
+   font-size: rem(24px);
+   line-height: 1.17;
+   letter-spacing: -rem(0.6px);
+
+   @include phone-se{
+      font-size: rem(18px);
+   }
+   }
+}
+
+.best__item-text>p{
+   line-height: 1.71;
+   font-weight: 200;
+   color: rgba(47, 50, 52, 0.8);
+}

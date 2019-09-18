@@ -1,0 +1,56 @@
+.overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   background: rgba(1, 1, 1, .8);
+   overflow: hidden;
+   display: none;
+}
+
+.popup {
+   max-width: 500px;
+   background-color: #ffffff;
+   border-radius: 5px;
+   padding: 20px 15px;
+   display: block;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+
+   @include tablets {
+      min-width: 80%;
+   }
+}
+
+.popup__title {
+   color: #2f3234;
+   font-family: $gagalin;
+   font-size: rem(14px);
+   margin-bottom: rem(20px);
+}
+
+.popup__text {
+   color: #2f3234;
+   font-family: 'Ubuntu';
+}
+
+.popup__form {
+   padding: 10px 20px;
+   color: #2f3234;
+   height: 10%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+
+   @include tablets {
+      width: 66%;
+   }
+
+   @include phone {
+      width: 98%;
+   }
+}
