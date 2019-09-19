@@ -127,13 +127,17 @@
    width: 100%;
    outline: none;
    border: rem(2px) solid transparent;
+
+   @include phone-x {
+      padding: rem(2px) rem(21px);
+   }
    
    &--textarea {
       resize: none;
       height: rem(110px);
 
-      @include phone-se {
-         height: rem(80px);
+      @include phone-x {
+         height: rem(60px);
          padding: rem(4px) rem(21px);
       }
 
