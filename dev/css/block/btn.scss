@@ -41,4 +41,9 @@
       padding: rem(8px) rem(17px);
       text-transform: uppercase;
    }
+
+   @include phone-se {
+      padding: rem(6px) rem(12px);
+      text-transform: uppercase;
+   }
 }

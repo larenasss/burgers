@@ -127,6 +127,10 @@
 .accordeon__item-info >p {
    font-size: rem(14px);
    line-height: 1.71;
+
+   @include phone {
+      font-size: rem(10px);
+   }
 }
 
 .accordeon__item-info >h5{

@@ -19,7 +19,11 @@ body {
   overflow: auto;
 
   @include phone-se {
-    font-size: rem(12px);
+    font-size: rem(10px);
+  }
+
+  @include min-h {
+    font-size: rem(9px);
   }
 }
  
