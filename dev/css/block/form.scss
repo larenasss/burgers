@@ -32,15 +32,11 @@
    }
 
    @include phone {
-      margin-bottom: rem(20px);
+      margin-bottom: rem(15px);
 
       &:last-child {
          margin-bottom: 0;
       }
-   }
-   
-   @include min-h {
-      margin-bottom: 0;
    }
 }
 
@@ -103,15 +99,6 @@
    &--last {
       margin-right: 0;
       margin-bottom: rem(10px);
-
-      @include phone {
-         margin-bottom: rem(15px);
-      }
-
-      @include min-h {
-         margin-bottom: 0;
-      }
-      
    }   
 }
 
