@@ -12,6 +12,11 @@
       flex-direction: column;
       padding: 0 1%;
    }
+
+   @include min-h {
+      margin: 0;
+      padding: 0;
+   }
 }
 
 .form__column {
@@ -33,8 +38,8 @@
          margin-bottom: 0;
       }
    }
-
-   @include phone-se {
+   
+   @include min-h {
       margin-bottom: 0;
    }
 }
@@ -67,11 +72,11 @@
       }
 
       @include phone {
-         margin-bottom: rem(32px);
+         margin-bottom: rem(15px);
       }
 
-      @include phone-se {
-         margin-bottom: rem(5px);
+      @include min-h {
+         margin-bottom: rem(10px);
       }
    }  
 }
@@ -100,12 +105,13 @@
       margin-bottom: rem(10px);
 
       @include phone {
-         margin-bottom: rem(30px);
+         margin-bottom: rem(15px);
       }
 
-      @include phone-se {
-         margin-bottom: rem(5px);
+      @include min-h {
+         margin-bottom: 0;
       }
+      
    }   
 }
 
@@ -128,6 +134,11 @@
 
       @include phone-se {
          height: rem(80px);
+         padding: rem(4px) rem(21px);
+      }
+
+      @include min-h {
+         height: rem(40px);
          padding: rem(4px) rem(21px);
       }
    }
@@ -159,10 +170,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-bottom: rem(15px);
    }
 
-   @include phone-se {
-      margin-bottom: rem(5px);
+   @include min-h {
+      margin-bottom: rem(10px);
    }
 }
 

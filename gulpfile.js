@@ -38,12 +38,6 @@ task('copy:img', () => {
       .pipe(reload({ stream: true }));
 });
 
-task('copy:biblio', () => {
-   return src('dev/biblio/**')
-      .pipe(dest('prod/biblio'))
-      .pipe(reload({ stream: true }));
-});
-
 const styles = [
    'node_modules/normalize.css/normalize.css',
    'dev/css/main.scss'
@@ -102,13 +96,13 @@ task(
    'default', 
    series(
    'clean',
-   parallel('copy:html','copy:fonts','copy:img','copy:biblio',  'styles', 'scripts'), 
+   parallel('copy:html','copy:fonts','copy:img', 'styles', 'scripts'), 
    parallel('watch', 'server'),
    )
 );
 
 task(
    'build', 
-   series('clean', parallel('copy:html','copy:fonts','copy:img','copy:biblio', 'styles', 'scripts','server'))
+   series('clean', parallel('copy:html','copy:fonts','copy:img','styles', 'scripts'))
 );
 

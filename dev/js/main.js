@@ -1,13 +1,21 @@
 //////////////////////////////////////////////// мобильное меню
 
-let buttonBurger = document.querySelector('.button-burger');
-let fullscreen = document.querySelector('.fullscreen');
-let bodystyle = document.querySelector('.body');
-buttonBurger.addEventListener('click', function() { fullscreen.style.right = '0' });
+const buttonBurger = document.querySelector('.button-burger');
+const fullscreen = document.querySelector('.fullscreen');
+const noScroll = document.querySelector('.welcome');
+
+buttonBurger.addEventListener('click', function() { 
+   fullscreen.style.right = '0'
+   noScroll.classList.remove('active')
+});
+
 let fullscreenExit = document.querySelector('.fullscreen__close');
-fullscreenExit.addEventListener('click', function() { fullscreen.style.right = '-100%' });
-fullscreenExit.addEventListener('click', function() { document.getElementsByTagName("body")[0].style.overflow="auto"; });
-buttonBurger.addEventListener('click', function() { document.getElementsByTagName("body")[0].style.overflow="hidden";});
+
+fullscreenExit.addEventListener('click', function() {
+    fullscreen.style.right = '-100%'
+    noScroll.classList.add('active') 
+   });
+
 
 ////////////////////////////////////////// Меню ( горизонтальный аккордеон)
 
@@ -193,6 +201,7 @@ const unBlockScroll = () => {
    setTimeout(() => {
       inscroll = false
    }, transitionDuration + touchScrollInertionTime);
+   
 }
 
 const performTransition = sectionEq => {
@@ -212,6 +221,7 @@ const performTransition = sectionEq => {
       });
 
       unBlockScroll();
+  
 }
 
 const scrollViewport = directions => {
@@ -228,8 +238,6 @@ const scrollViewport = directions => {
    }
 
 }
-
-
 
 $(document).on('wheel', function(e) {
    let deltaY = e.originalEvent.deltaY;
@@ -261,6 +269,7 @@ $(document).on('keydown', e => {
 
 $('[data-scroll-to]').on('click', e => {
    e.preventDefault();
+   fullscreen.style.right = '-100%'
 
    const target = parseInt($(e.currentTarget).attr('data-scroll-to'));
 

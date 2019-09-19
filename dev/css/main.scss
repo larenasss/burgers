@@ -44,6 +44,12 @@ $z-fixed-menu: 100;
    }
 }
 
+@mixin min-h {
+   @media screen and (max-height: 420px) {
+      @content;
+   }
+}
+
 
 @import "./layout/normalize.scss";
 @import "./layout/fonts.scss";
