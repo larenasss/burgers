@@ -145,6 +145,10 @@
    @include phone {
       font-size: rem(12px);
    }
+
+   @include min-h {
+      font-size: rem(9px);
+    }
 }
 
 .accordeon__item-info >h5{
