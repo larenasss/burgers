@@ -20,16 +20,24 @@
 .team__content {
    display: flex;
    flex-direction: column; 
-   justify-content: center;
-   padding: 0 18%;
+   padding: 30% 18% 20%;
    
    @include tablets {
       align-items: center;
-      padding: 0 26%;
+      padding: 30% 26% 20%;
    }
 
    @include phone {
-      padding: 0 11%;
+      align-items: center;
+      padding: 30% 11% 20%;
+   }
+
+   @include phone-x {
+      padding: 40% 11% 20%;
+   }
+      
+   @include phone-se {
+      padding: 10% 11% 20%;
    }   
 }
 
@@ -124,12 +132,18 @@
     }
 }
 
+.accordeon__item-info {
+   @include tablets {
+      padding: 0 5%;
+   }
+}
+
 .accordeon__item-info >p {
    font-size: rem(14px);
    line-height: 1.71;
 
    @include phone {
-      font-size: rem(10px);
+      font-size: rem(12px);
    }
 }
 

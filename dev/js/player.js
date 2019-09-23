@@ -171,7 +171,7 @@ let   muteBtn = document.querySelector('.player__volume');
          let clickPosition = e.offsetX;
 
          positionVolumeButton.style.left = (100 * clickPosition / barWidth) + '%';
-         currentVolume = clickPosition / barWidth;
+         let currentVolume = clickPosition / barWidth;
          vedeoEl.volume = currentVolume;
 
          if( positionVolumeButton.style.left == 0 + '%') {

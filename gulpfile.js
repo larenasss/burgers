@@ -103,6 +103,6 @@ task(
 
 task(
    'build', 
-   series('clean', parallel('copy:html','copy:fonts','copy:img','styles', 'scripts'))
+   series('clean', parallel('copy:html','copy:fonts','copy:img','styles', 'scripts',  'server'))
 );
 

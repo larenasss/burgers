@@ -45,7 +45,7 @@ $z-fixed-menu: 100;
 }
 
 @mixin min-h {
-   @media screen and (max-height: 650px) {
+   @media screen and (min-height: 650px) {
       @content;
    }
 }
