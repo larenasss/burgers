@@ -1,0 +1,49 @@
+.btn {
+   padding: rem(7px) rem(17px);
+   border-radius: rem(5px);
+   background: $orange;
+   font-size: rem(13px);
+}
+   
+.btn--reviews{
+   position: relative;
+   background: #2f3234;
+   color: white;
+   text-decoration: none;
+   text-transform: uppercase;
+   padding: rem(10px) rem(15px);
+
+   @include phone{
+      color: transparent;
+   }
+
+   &::before {
+      content: "читать отзыв";
+      position: absolute;
+      @include transform;
+      display: none;
+      white-space: nowrap;
+
+      @include phone{
+         display: block;
+         color: white;
+         text-align: center;
+      }      
+   }
+}
+
+.form__btn {
+   padding: rem(10px) rem(18px);
+   text-transform: uppercase;
+   margin-right: rem(10px);
+
+   @include phone {
+      padding: rem(8px) rem(17px);
+      text-transform: uppercase;
+   }
+
+   @include phone-se {
+      padding: rem(6px) rem(12px);
+      text-transform: uppercase;
+   }
+}
