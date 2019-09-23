@@ -20,25 +20,23 @@
 .team__content {
    display: flex;
    flex-direction: column; 
-   padding: 30% 18% 20%;
-   
+   padding: 20% 18% 10%;
+
    @include tablets {
-      align-items: center;
-      padding: 30% 26% 20%;
+      text-align: center;
    }
 
    @include phone {
-      align-items: center;
-      padding: 30% 11% 20%;
+      padding: 40% 18% 10%;
    }
 
    @include phone-x {
       padding: 40% 11% 20%;
    }
-      
+
    @include phone-se {
       padding: 10% 11% 20%;
-   }   
+   }
 }
 
 
@@ -133,8 +131,10 @@
 }
 
 .accordeon__item-info {
+   padding: 0 5%;
+
    @include tablets {
-      padding: 0 5%;
+      padding: 0 6%;
    }
 }
 
@@ -175,4 +175,9 @@
    height: rem(100px);
    border-radius: rem(50px);
    object-fit: cover;
+
+   @include phone-se {
+      width: rem(70px);
+   height: rem(70px);
+   }   
 }
