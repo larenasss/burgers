@@ -7,10 +7,6 @@
    height: rem(55px);
    cursor: pointer;
    display: none;
-
-   @include tablets {
-      display: block;
-   }
 }
 
 .close:before,

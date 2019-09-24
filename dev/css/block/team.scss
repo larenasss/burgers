@@ -11,6 +11,7 @@
    top: 0;
    bottom: 0;
    left: 50%;
+   align-items: center;
 
    @include tablets {
       left: 0;
@@ -19,23 +20,20 @@
 
 .team__content {
    display: flex;
-   flex-direction: column; 
-   padding: 20% 18% 10%;
+   flex-direction: column;
+   height: 60%;
+   padding: 0 10%;
 
    @include tablets {
       text-align: center;
    }
 
-   @include phone {
-      padding: 40% 18% 10%;
-   }
-
    @include phone-x {
-      padding: 40% 11% 20%;
+      height: 80%;
    }
 
    @include phone-se {
-      padding: 10% 11% 20%;
+      height: 90%;
    }
 }
 
