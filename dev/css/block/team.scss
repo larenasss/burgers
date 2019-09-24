@@ -28,6 +28,10 @@
       text-align: center;
    }
 
+   @include phone-x {
+      height: 80%;
+   }
+
    @include phone-se {
       height: 90%;
    }
