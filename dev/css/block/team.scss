@@ -64,6 +64,7 @@
    
    .accordeon__item-title{
       color: $yellow;
+      transition: 1s;
       
       &::before {
          content: "";
@@ -73,6 +74,7 @@
          border-bottom-color: $yellow;
          border-top-width: 0;
          margin-right: rem(9px);
+         transition: .5s;
       }
    }
 

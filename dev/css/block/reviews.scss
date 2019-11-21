@@ -15,6 +15,7 @@
    background: center center / cover no-repeat;
    position: relative;
    filter: grayscale(100%);
+   transition: 1s;
 
    @include tablets {
       width: 50%;
@@ -24,6 +25,7 @@
    &:hover{
       .reviews__hover {
          opacity: 1;
+         transition: 1s;
       }
    }
 }

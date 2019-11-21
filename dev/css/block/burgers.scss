@@ -105,11 +105,11 @@
 
    &:hover {
       background-color: #e35028;
-      transition: 0.5s;
+      transition: 1s;
 
       + .composition{
          opacity: 1;
-         transition: 0.5s;
+         transition: 1s;
       }
    }
 }

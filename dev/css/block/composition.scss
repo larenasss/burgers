@@ -11,6 +11,7 @@
    min-width: 29%;
    width: 60%;
    opacity: 0;
+   transition: 1s;
 
    @include tablets {
       left: rem(90px);
