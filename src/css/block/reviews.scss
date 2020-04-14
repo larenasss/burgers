@@ -1,0 +1,98 @@
+.reviews{
+   position: relative;
+}
+
+.reviews__list{
+   display: flex;
+   flex-flow: wrap;
+   height: 100%;
+}
+
+.reviews__item{
+   display: flex;
+   width: 25%;
+   height: 50%;
+   background: center center / cover no-repeat;
+   position: relative;
+   filter: grayscale(100%);
+
+   @include tablets {
+      width: 50%;
+      height: 25%;
+   }
+   
+   &:hover{
+      .reviews__hover {
+         opacity: 1;
+         transition: .5s ease-in-out;
+      }
+   }
+}
+
+.reviews__hover{
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: rgba(#444646, .5);
+   padding: rem(50px) rem(30px) rem(0px) rem(20px);
+   opacity: 0;
+
+   @include tablets {
+      padding: rem(15px) rem(45px);
+      text-align: center;
+   }
+
+   @include phone {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   @include phone-x {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: rem(10px) rem(30px);
+   }
+
+   @include phone-se {
+      padding: rem(10px) rem(20px);
+   }
+}
+
+.reviews__title{
+   font-size: rem(14px);
+   font-family: $gagalin;
+   font-weight: 200;
+   margin-bottom: rem(30px);
+
+   @include tablets {
+      margin-bottom: rem(10px);
+   }
+
+   @include phone {
+      font-size: rem(24px);
+   }
+
+   @include phone-se {
+      font-size: rem(18px);
+   }
+}
+
+.reviews__text{
+   margin-bottom: rem(15px);
+   
+
+   @include tablets {
+      margin-bottom: rem(35px);
+      >p {
+         line-height: 1.7;
+      }
+   }
+
+   @include phone {
+      display: none;
+   }
+}

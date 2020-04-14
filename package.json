@@ -36,13 +36,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/larenasss/loftschool__second-course.git"
+    "url": "git+https://github.com/larenasss/burgers.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/larenasss/loftschool__second-course/issues"
+    "url": "https://github.com/larenasss/burgers/issues"
   },
-  "homepage": "https://github.com/larenasss/loftschool__second-course#readme"
+  "homepage": "https://github.com/larenasss/burgers#readme"
 }

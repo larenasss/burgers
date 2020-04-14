@@ -17,30 +17,30 @@ const env = process.env.NODE_ENV;
 sass.compiler = require('node-sass');
 
 task( 'clean', () => {
-   return src( 'prod/**/*', { read: false }).pipe(rm());
+   return src( 'dist/**/*', { read: false }).pipe(rm());
  });
 
 task('copy:html', () => {
-   return src('dev/*.html')
-      .pipe(dest('prod'))
+   return src('src/*.html')
+      .pipe(dest('dist'))
       .pipe(reload({ stream: true }));
 });
 
 task('copy:fonts', () => {
-   return src('dev/fonts/**')
-      .pipe(dest('prod/fonts'))
+   return src('src/fonts/**')
+      .pipe(dest('dist/fonts'))
       .pipe(reload({ stream: true }));
 });
 
 task('copy:img', () => {
-   return src('dev/img/**')
-      .pipe(dest('prod/img'))
+   return src('src/img/**')
+      .pipe(dest('dist/img'))
       .pipe(reload({ stream: true }));
 });
 
 const styles = [
    'node_modules/normalize.css/normalize.css',
-   'dev/css/main.scss'
+   'src/css/main.scss'
 ]
 
 task('styles', () => {
@@ -53,7 +53,7 @@ task('styles', () => {
    )
    .pipe(gulpif(env === 'prod', gcmq()))
    .pipe(gulpif(env === 'prod', cleanCSS()))
-   .pipe(dest('prod'))
+   .pipe(dest('dist'))
    .pipe(reload({ stream: true}));
 });
 
@@ -61,7 +61,7 @@ const libs = [
    'node_modules/jquery/dist/jquery.js',
    'node_modules/jquery-touchswipe/jquery.touchSwipe.js',
    'node_modules/mobile-detect/mobile-detect.js',
-   'dev/js/*.js'
+   'src/js/*.js'
 ]
 
 task('scripts', () => {
@@ -72,7 +72,7 @@ task('scripts', () => {
           })
          )
       .pipe(uglify())
-      .pipe(dest('prod'))
+      .pipe(dest('dist'))
       .pipe(reload({ stream: true}));
 });
 
@@ -81,15 +81,15 @@ task('scripts', () => {
 task('server', () => {
    browserSync.init({
        server: {
-           baseDir: "./prod"
+           baseDir: "./dist"
        },
    });
 });
 
 task('watch', () => {
-   watch('./dev/css/**/*.scss', series('styles'));
-   watch('./dev/*.html', series('copy:html'));
-   watch('./dev/js/*.js', series('scripts'));
+   watch('./src/css/**/*.scss', series('styles'));
+   watch('./src/*.html', series('copy:html'));
+   watch('./src/js/*.js', series('scripts'));
 });
 
 task(
@@ -103,6 +103,6 @@ task(
 
 task(
    'build', 
-   series('clean', parallel('copy:html','copy:fonts','copy:img','styles', 'scripts',  'server'))
+   series('clean', parallel('copy:html','copy:fonts','copy:img','styles', 'scripts'))
 );
 
