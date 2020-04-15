@@ -106,13 +106,36 @@
 }
 
 .options__close {
+   position: absolute;
+   top: rem(4px);
+   right: 0;
+   width: rem(45px);
+   height: rem(55px);
+   cursor: pointer;
    z-index: 2;
    display: none;
 }
 
 .options__close:before,
 .options__close:after {
+   position: absolute;
+   content: "";
    background: #ffffff;
    opacity: 0.7;
+   top: rem(21px);
+   left: rem(10px);
+   width: rem(26px);
+   height: rem(4px);
+   border-radius: rem(5px);
+}
+
+.options__close:before {
+   -webkit-transform: rotate(45deg);
+   transform: rotate(45deg);
+}
+
+.options__close:after {
+   -webkit-transform: rotate(-45deg);
+   transform: rotate(-45deg);
 }
 

@@ -1,5 +1,5 @@
 # burgers
-https://larenasss.github.io/burgers/prod/ <== Ссылка на проект
+https://larenasss.github.io/burgers/dist/ <== Ссылка на проект
 
  Использованы HTML5 + CSS3, препроцессор SASS, интерактивные элементы написаны на нативном JS + jQwery. 
  Для сборки использован Gulp
