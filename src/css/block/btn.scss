@@ -4,6 +4,13 @@
    background: $orange;
    font-size: rem(13px);
 }
+
+.btn__link {
+   color: white;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-size: rem(13px);
+}
    
 .btn--reviews{
    position: relative;
@@ -32,18 +39,3 @@
    }
 }
 
-.form__btn {
-   padding: rem(10px) rem(18px);
-   text-transform: uppercase;
-   margin-right: rem(10px);
-
-   @include phone {
-      padding: rem(8px) rem(17px);
-      text-transform: uppercase;
-   }
-
-   @include phone-se {
-      padding: rem(6px) rem(12px);
-      text-transform: uppercase;
-   }
-}

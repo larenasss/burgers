@@ -37,7 +37,7 @@
    &:last-child{
       margin-right: 0;
 
-      .best__item-title{
+      .best__desk-title{
          margin-bottom: rem(10px);
       }
    }
@@ -79,7 +79,7 @@
    }
 }
 
-.best__item-title{
+.best__desk-title{
    margin-bottom: rem(14px);
 
    @include phone-se{
@@ -99,7 +99,7 @@
    }
 }
 
-.best__item-text>p{
+.best__desk-text > p{
    line-height: 1.71;
    font-weight: 200;
    color: rgba(47, 50, 52, 0.8);

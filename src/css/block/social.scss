@@ -21,14 +21,19 @@
    align-items: center;
 }
 
-.social__item {
+.social__block {
    margin-right: rem(20px);
+   width: 25px;
+   height: 25px;
+   display: flex;
+   align-items: center;
 
    &:last-child {
       margin-right: 0;
    }
 }
 
-.social__link:hover >svg{
-      fill: #fff;
+.social__block-link:hover >svg{
+   fill: #fff;
+   transition: .5s ease-in-out;
 }

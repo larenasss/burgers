@@ -3,11 +3,6 @@
    position: relative;
 }
 
-.welcome__container{
-   height: 100%;
-   display: flex;
-   justify-content: flex-start;
-}
 
 .welcome__content{
    display: flex;
@@ -54,7 +49,7 @@
    }
 }
 
-.welcome_img {
+.welcome__conten-img {
    max-width: 90%;
 }
 
@@ -87,6 +82,12 @@
    @include phone-se {
       font-size: rem(32px);
    }
+}
+
+.weclome__btn {
+   position: absolute;
+   bottom: rem(25px);
+   left: 50%;
 }
 
 

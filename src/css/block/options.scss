@@ -3,120 +3,116 @@
    position: relative;
 }
 
-.options__accordeon{
-   position: absolute;
-   right: 0;
-   top: 0;
-   bottom: 0;
-   width: 100%;
+.options__accordeon {
+   height: 100%;
 }
 
-.options__menu{
-   position: relative;
+.options__menu {
    display: flex;
    justify-content: flex-end;
+   height: 100%;
 }
 
 .options__item {
    display: flex;
+   justify-content: flex-end;
+   min-width: 56px;
+   transform-origin: 100% 50%;
+}
+
+.options__title {
+   font-family: $gagalin;
+   writing-mode: vertical-lr;
+   transform: rotate(180deg);
    height: 100%;
+   font-size: rem(40px);
+   padding-top: rem(20px);
+}
+
+
+.options__title--meat {
+   background: url('./img/options/menu-1.png')center center / cover no-repeat;
+}
+
+.options__title--vegetarian {
+   background: url('./img/options/menu-2.png')center center / cover no-repeat;
+}
+
+.options__title--dietary{
+   background: url('./img/options/menu-3.png')center center / cover no-repeat;
+}
+
+.options__body {
+   padding: 0;
+   width: 0;
+   background-color: rgba($color: #2f3234, $alpha: 0.9);
+}
+
+.options__body > p {
+   opacity: 0;
 }
 
 .options__item--active {
+   width: rem(540px);
+   
+
+   @include tablets {
+      width: 100%;
+   }
 
    @include phone {
-      z-index: 2;
-      position: absolute;
-      height: 100%;
+      width: 100%;
+   }
+
+   @include phone-se {
+      width: 100%;
    }
    
-   .options__item-title {
-      color: $yellow;
-   }
-   
-   .options__content {
-      width: rem(540px);
+   .options__body {
+      width: 100%;
       padding: rem(62px) rem(37px) rem(0px) rem(33px);
+      transform: scaleY(1);
+      transition: all .5s;
 
       @include tablets {
-         width: 100%;
          padding: rem(62px) rem(37px) rem(0px) rem(33px);
       }
 
       @include phone {
-         width: 100%;
          padding: rem(62px) rem(37px) rem(0px) rem(40px);
       }
 
       @include phone-se {
-         width: 100%;
          padding: rem(62px) rem(20px) rem(0px) rem(20px);
       }
    }
 
-   .options__content >p {
+   .options__body > p {
       opacity: 1;
       transition: .2s ease-in-out;
       transition-delay: .5s;
    }
 
+   .options__title {
+      color: $yellow;
+   }
+
+   
    .options__close {
       @include phone {
          display: block;
       }
    }
-
 }
 
-.options__content{
-   width: 0;
-   padding: 0;
-   transition: all .5s ease-in-out;
-   background-color: rgba($color: #2f3234, $alpha: 0.9);
+.options__close {
+   z-index: 2;
+   display: none;
 }
 
-.options__content >p {
-   opacity: 0;
+.options__close:before,
+.options__close:after {
+   background: #ffffff;
+   opacity: 0.7;
 }
 
-.options__pic{
-   display: flex;
-   box-sizing: content-box;
-   justify-content: center;
-   width: rem(80px);
-   padding: 0;
-
-   @include phone-x {
-      width: rem(50px);
-   }
-}
-
-.options__pic--meat{
-   background: url('./img/options/menu-1.png')center center / cover no-repeat;
-}
-
-.options__pic--vegetarian{
-   background: url('./img/options/menu-2.png')center center / cover no-repeat;
-}
-
-.options__pic--dietary{
-   background: url('./img/options/menu-3.png')center center / cover no-repeat;
-}
-
-.options__item-title {
-
-   display: flex;
-   align-content: center;
-   writing-mode: vertical-lr;
-   transform: rotate(180deg);
-   font-family: $gagalin;
-   font-size: rem(40px);
-   letter-spacing: 2.14;
-   white-space: nowrap;
-   height: 100%;
-   padding: rem(25px) 0 0 0;
-
-   @include phone {
-      font-size: rem(30px);
-   }
-}

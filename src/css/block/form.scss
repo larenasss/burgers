@@ -238,3 +238,37 @@
       text-align: center;
    }
 }
+
+
+.form__btn {
+   padding: rem(10px) rem(18px);
+   text-transform: uppercase;
+   margin-right: rem(10px);
+
+   @include phone {
+      padding: rem(8px) rem(17px);
+      text-transform: uppercase;
+   }
+
+   @include phone-se {
+      padding: rem(6px) rem(12px);
+      text-transform: uppercase;
+   }
+}
+
+
+.form__close {
+   display: block;
+}
+
+.form__close {
+   width: rem(30px);
+   height: rem(30px);
+}
+
+.form__close:before,
+.form__close:after {
+   width: rem(20px);
+   top: 10px;
+   left: 6px;
+}

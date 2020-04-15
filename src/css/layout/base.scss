@@ -78,6 +78,27 @@ button {
   display: flex;
   flex-direction: column;
 
+  &--welcome {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &--burgers {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  &--video {
+    align-items: center;
+  }
+
+  &--fullscreen {
+    height: 100%;
+  }
+
   @include tablets {
     max-width: initial;
     width: 95%;

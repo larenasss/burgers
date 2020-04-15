@@ -13,10 +13,6 @@
    padding: rem(12px) rem(10px) 0;
 }
 
-.container__fullscreen{
-   height: 100%;
-}
-
 .fullscreen__list {
    display: flex;
    flex-direction: column;
@@ -61,6 +57,40 @@
 .fullscreen__header-logo {
    width: rem(92px);
    height: rem(69px);
+}
+
+
+.fullscreen__close {
+   position: relative;
+   z-index: 1;
+   right: rem(8px);
+   top: rem(10px);
+   width: rem(25px);
+   height: rem(21px);
+   cursor: pointer;
+}
+
+.fullscreen__close:before,
+.fullscreen__close:after {
+   content: "";
+   position: absolute;
+   top: rem(21px);
+   left: rem(10px);
+   width: rem(26px);
+   height: rem(4px);
+   border-radius: rem(5px);
+   background: #ffffff;
+   opacity: 0.7;
+}
+
+.fullscreen__close:before {
+   -webkit-transform: rotate(45deg);
+   transform: rotate(45deg);
+}
+
+.fullscreen__close:after {
+   -webkit-transform: rotate(-45deg);
+   transform: rotate(-45deg);
 }
 
 

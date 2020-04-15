@@ -1,6 +1,6 @@
 //////////////////////////////////////////////// мобильное меню
 
-const buttonBurger = document.querySelector('.button-burger');
+const buttonBurger = document.querySelector('.gamdurger');
 const fullscreen = document.querySelector('.fullscreen');
 const noScroll = document.querySelector('.welcome');
 
@@ -22,12 +22,12 @@ fullscreenExit.addEventListener('click', function() {
 let menu = document.querySelector('.options');
 let optionsItem = document.querySelectorAll('.options__item');
 let optionsItemLength = optionsItem.length;
-
+/*
 menu.addEventListener('click', function(e) {
    for (let i = 0; i < optionsItemLength; i++) {
       optionsItem[i].classList.remove('options__item--active');
    }
-});
+});*/
 
 for (let i = 0; i < optionsItemLength; i++) {
       optionsItem[i].addEventListener('click', function(e) {
@@ -68,20 +68,20 @@ for (let i = 0; i < accordeonItemLenght; i++) {
 
 ////////////////////////////////////// слайдер бургеров (jQuery)
 
-let contentList = $('.burgers__block-menu');
-let contentItem = $('.burgers__block-item');
+let contentList = $('.burgers__list');
+let contentItem = $('.burgers__item');
 let duration = 500;
 
       var moveSlide = function (container, slideNum) {
-         let contenItemActive = $('.burgers__block-item--active');
+         let contenItemActive = $('.burgers__item--active');
          let reqItem = contentItem.eq(slideNum);
          let reqIndex = reqItem.index();
          
          if (reqItem.length) {
             contentList.animate({'left' : -reqIndex * 100 + '%'
             }, duration, function() {
-               contenItemActive.removeClass('burgers__block-item--active');
-               reqItem.addClass('burgers__block-item--active');
+               contenItemActive.removeClass('burgers__item--active');
+               reqItem.addClass('burgers__item--active');
             });
          }
       }
@@ -90,19 +90,19 @@ let duration = 500;
          e.preventDefault();
 
          var   $this = $(this), 
-               container = $this.closest('.container__burgers'),
+               container = $this.closest('.container--burgers'),
                items = $(contentItem, container),
-               contenItemActive = items.filter('.burgers__block-item--active'),
+               contenItemActive = items.filter('.burgers__item--active'),
                nextItem = contenItemActive.next(),
                prevItem = contenItemActive.prev(),
                existedItem, edgeItem, reqItem;
 
-         if   ($this.hasClass('burgers__scroll-right')) { // вперед
+         if   ($this.hasClass('burgers__scroll--right')) { // вперед
                existedItem = contenItemActive.next();
                edgeItem = items.first();
          } 
          
-         if   ($this.hasClass('burgers__scroll-left')) {
+         if   ($this.hasClass('burgers__scroll--left')) {
                existedItem = contenItemActive.prev();
                edgeItem = items.last();
 
