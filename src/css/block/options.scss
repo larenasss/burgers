@@ -79,7 +79,7 @@
       }
 
       @include phone {
-         padding: rem(62px) rem(37px) rem(0px) rem(40px);
+         padding: rem(30px) rem(20px) rem(0px) rem(20px);
       }
 
       @include phone-se {
@@ -100,7 +100,7 @@
    
    .options__close {
       @include phone {
-         display: block;
+         display: block !important;
       }
    }
 }
